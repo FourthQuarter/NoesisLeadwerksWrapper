@@ -89,4 +89,4 @@ That's all! You should now see a tux:
 
 ![TUX](http://i.imgur.com/rdF5RCz.jpg)
 
-If you see nothing, the application just crashes or complains about missing dlls, then you probably didn't read the noesis documentation. For more examples and the full source code for this project check the *Examples* folder.
+If you see nothing, the application just crashes or complains about missing dlls, then you probably didn't read the noesis documentation. For more examples and the full source code for this project check the *Examples* folder. 
