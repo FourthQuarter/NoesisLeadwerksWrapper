@@ -1,0 +1,218 @@
+\hypertarget{class_u_i_renderer}{\section{U\-I\-Renderer Class Reference}
+\label{class_u_i_renderer}\index{U\-I\-Renderer@{U\-I\-Renderer}}
+}
+
+
+X\-A\-M\-L Renderer.  
+
+
+
+
+{\ttfamily \#include $<$U\-I\-Renderer.\-h$>$}
+
+
+
+Collaboration diagram for U\-I\-Renderer\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_u_i_renderer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_u_i_renderer_a8e0fb11ab4e123f3524756e276199351}{\hyperlink{class_u_i_renderer_a8e0fb11ab4e123f3524756e276199351}{U\-I\-Renderer} (const int id)}\label{class_u_i_renderer_a8e0fb11ab4e123f3524756e276199351}
+
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{class_u_i_renderer}{U\-I\-Renderer}. \end{DoxyCompactList}\item 
+void \hyperlink{class_u_i_renderer_a8e61394cd4b9dcf2242f1ec47e95ba5d}{Load} (std\-::string xaml, std\-::string resource=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Loads the specified xaml. \end{DoxyCompactList}\item 
+void \hyperlink{class_u_i_renderer_a9304bf4f0ff00a671cf45ac5a4198004}{Update} (const double time)
+\begin{DoxyCompactList}\small\item\em Update Renderer. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_renderer_a305ee68738d0b1b833b73a85ca077261}{void \hyperlink{class_u_i_renderer_a305ee68738d0b1b833b73a85ca077261}{Mouse\-Position} (const int x, const int y)}\label{class_u_i_renderer_a305ee68738d0b1b833b73a85ca077261}
+
+\begin{DoxyCompactList}\small\item\em Notifies the renderer that the mouse position has changed. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_renderer_aad758939d86e2741ed7330252cfe3b74}{void \hyperlink{class_u_i_renderer_aad758939d86e2741ed7330252cfe3b74}{Mouse\-Button\-Down} (const int button)}\label{class_u_i_renderer_aad758939d86e2741ed7330252cfe3b74}
+
+\begin{DoxyCompactList}\small\item\em Notifies the renderer that a mouse button has been pressed. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_renderer_a9d72b10f66816ecb07c51025130591bf}{void \hyperlink{class_u_i_renderer_a9d72b10f66816ecb07c51025130591bf}{Mouse\-Button\-Up} (const int button)}\label{class_u_i_renderer_a9d72b10f66816ecb07c51025130591bf}
+
+\begin{DoxyCompactList}\small\item\em Notifies the renderer that a mouse button has been released. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_renderer_a02a32cecd924b8a855bce495672f8e4e}{void \hyperlink{class_u_i_renderer_a02a32cecd924b8a855bce495672f8e4e}{Mouse\-Wheel} (const int rotation)}\label{class_u_i_renderer_a02a32cecd924b8a855bce495672f8e4e}
+
+\begin{DoxyCompactList}\small\item\em Notifies the renderer that the mouse wheel has been rotated. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_renderer_ac6c071a178d51415329bf4f4f71dfd48}{void \hyperlink{class_u_i_renderer_ac6c071a178d51415329bf4f4f71dfd48}{Character} (const char character)}\label{class_u_i_renderer_ac6c071a178d51415329bf4f4f71dfd48}
+
+\begin{DoxyCompactList}\small\item\em Sends the specified key to the renderer. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_renderer_af0f5ee9edad9a7a35b46187d3fb697ea}{void \hyperlink{class_u_i_renderer_af0f5ee9edad9a7a35b46187d3fb697ea}{Key\-Down} (const int key)}\label{class_u_i_renderer_af0f5ee9edad9a7a35b46187d3fb697ea}
+
+\begin{DoxyCompactList}\small\item\em Notifies renderer that a key was pressed. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_renderer_acf25d6ac3df945fde9054c34bf28edd1}{void \hyperlink{class_u_i_renderer_acf25d6ac3df945fde9054c34bf28edd1}{Key\-Up} (const int key)}\label{class_u_i_renderer_acf25d6ac3df945fde9054c34bf28edd1}
+
+\begin{DoxyCompactList}\small\item\em Notifies renderer that a key was released. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_renderer_a1299a480654f95b593f1b22117e2324a}{void \hyperlink{class_u_i_renderer_a1299a480654f95b593f1b22117e2324a}{Render\-Offscreen} ()}\label{class_u_i_renderer_a1299a480654f95b593f1b22117e2324a}
+
+\begin{DoxyCompactList}\small\item\em Render xaml offscreen. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_renderer_a6961b53c2f5bf48d18c5164aaf5785d6}{void \hyperlink{class_u_i_renderer_a6961b53c2f5bf48d18c5164aaf5785d6}{Render} ()}\label{class_u_i_renderer_a6961b53c2f5bf48d18c5164aaf5785d6}
+
+\begin{DoxyCompactList}\small\item\em Render xaml to screen. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_renderer_a9afd9d07f2c93d426f55ce2e84a64cef}{void \hyperlink{class_u_i_renderer_a9afd9d07f2c93d426f55ce2e84a64cef}{Set\-Size} (const int width, const int height)}\label{class_u_i_renderer_a9afd9d07f2c93d426f55ce2e84a64cef}
+
+\begin{DoxyCompactList}\small\item\em Sets the renderer to the specified size. \end{DoxyCompactList}\item 
+void \hyperlink{class_u_i_renderer_a05d5fed9d98c02a150efeb8e6ea36812}{Set\-Antialiasing\-Mode} (const int mode)
+\begin{DoxyCompactList}\small\item\em Sets the antialiasing mode. \end{DoxyCompactList}\item 
+void \hyperlink{class_u_i_renderer_a77ab17ad59e589eb32d55699ea1ab1c6}{Set\-Tessellation\-Quality} (const int quality)
+\begin{DoxyCompactList}\small\item\em Sets the tesselation quality. \end{DoxyCompactList}\item 
+void \hyperlink{class_u_i_renderer_a54d4d9236175ecca2568dffa8f6a60e6}{Set\-Tessellation\-Mode} (const int mode)
+\begin{DoxyCompactList}\small\item\em Sets the tesselation mode. \end{DoxyCompactList}\item 
+void \hyperlink{class_u_i_renderer_ad8eacb018b912e5d7786ca6f1642b4ce}{Set\-Offscreen\-Size} (const int width, const int height, const int multisample)
+\begin{DoxyCompactList}\small\item\em Set offscreen rendering quality. \end{DoxyCompactList}\item 
+short \hyperlink{class_u_i_renderer_a2c06181bfd9133704b5bdd17e1e1fd58}{Get\-U\-I\-D} ()
+\begin{DoxyCompactList}\small\item\em Returns the renderers uid. \end{DoxyCompactList}\item 
+Noesis\-::\-Gui\-::\-Framework\-Element $\ast$ \hyperlink{class_u_i_renderer_a64312ae42b4990ba165f9bea9dc85f48}{Get\-X\-A\-M\-L} ()
+\begin{DoxyCompactList}\small\item\em Returns the loaded X\-A\-M\-L. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+X\-A\-M\-L Renderer. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_u_i_renderer_a2c06181bfd9133704b5bdd17e1e1fd58}{\index{U\-I\-Renderer@{U\-I\-Renderer}!Get\-U\-I\-D@{Get\-U\-I\-D}}
+\index{Get\-U\-I\-D@{Get\-U\-I\-D}!UIRenderer@{U\-I\-Renderer}}
+\subsubsection[{Get\-U\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}short U\-I\-Renderer\-::\-Get\-U\-I\-D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_u_i_renderer_a2c06181bfd9133704b5bdd17e1e1fd58}
+
+
+Returns the renderers uid. 
+
+\begin{DoxyReturn}{Returns}
+uid 
+\end{DoxyReturn}
+\hypertarget{class_u_i_renderer_a64312ae42b4990ba165f9bea9dc85f48}{\index{U\-I\-Renderer@{U\-I\-Renderer}!Get\-X\-A\-M\-L@{Get\-X\-A\-M\-L}}
+\index{Get\-X\-A\-M\-L@{Get\-X\-A\-M\-L}!UIRenderer@{U\-I\-Renderer}}
+\subsubsection[{Get\-X\-A\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}Noesis\-::\-Gui\-::\-Framework\-Element$\ast$ U\-I\-Renderer\-::\-Get\-X\-A\-M\-L (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_u_i_renderer_a64312ae42b4990ba165f9bea9dc85f48}
+
+
+Returns the loaded X\-A\-M\-L. 
+
+\begin{DoxyReturn}{Returns}
+X\-A\-M\-L 
+\end{DoxyReturn}
+\hypertarget{class_u_i_renderer_a8e61394cd4b9dcf2242f1ec47e95ba5d}{\index{U\-I\-Renderer@{U\-I\-Renderer}!Load@{Load}}
+\index{Load@{Load}!UIRenderer@{U\-I\-Renderer}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void U\-I\-Renderer\-::\-Load (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{xaml, }
+\item[{std\-::string}]{resource = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{class_u_i_renderer_a8e61394cd4b9dcf2242f1ec47e95ba5d}
+
+
+Loads the specified xaml. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em xaml} & X\-A\-M\-L to load \\
+\hline
+\mbox{\tt in}  & {\em resource} & Additional xaml style / resource \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_u_i_renderer_a05d5fed9d98c02a150efeb8e6ea36812}{\index{U\-I\-Renderer@{U\-I\-Renderer}!Set\-Antialiasing\-Mode@{Set\-Antialiasing\-Mode}}
+\index{Set\-Antialiasing\-Mode@{Set\-Antialiasing\-Mode}!UIRenderer@{U\-I\-Renderer}}
+\subsubsection[{Set\-Antialiasing\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void U\-I\-Renderer\-::\-Set\-Antialiasing\-Mode (
+\begin{DoxyParamCaption}
+\item[{const int}]{mode}
+\end{DoxyParamCaption}
+)}}\label{class_u_i_renderer_a05d5fed9d98c02a150efeb8e6ea36812}
+
+
+Sets the antialiasing mode. 
+
+Default value is M\-S\-A\-A. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mode} & Noesis\-::\-Gui\-::\-Antialiasing\-Mode \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_u_i_renderer_ad8eacb018b912e5d7786ca6f1642b4ce}{\index{U\-I\-Renderer@{U\-I\-Renderer}!Set\-Offscreen\-Size@{Set\-Offscreen\-Size}}
+\index{Set\-Offscreen\-Size@{Set\-Offscreen\-Size}!UIRenderer@{U\-I\-Renderer}}
+\subsubsection[{Set\-Offscreen\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void U\-I\-Renderer\-::\-Set\-Offscreen\-Size (
+\begin{DoxyParamCaption}
+\item[{const int}]{width, }
+\item[{const int}]{height, }
+\item[{const int}]{multisample}
+\end{DoxyParamCaption}
+)}}\label{class_u_i_renderer_ad8eacb018b912e5d7786ca6f1642b4ce}
+
+
+Set offscreen rendering quality. 
+
+By default, offscreen textures have the same dimensions that the target surface and multisampling is disabled for them. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em width} & Relative width (0-\/1) \\
+\hline
+\mbox{\tt in}  & {\em height} & Relative height (0-\/1) \\
+\hline
+\mbox{\tt in}  & {\em multisample} & Noesis\-::\-Render\-::\-Multi\-Sample \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_u_i_renderer_a54d4d9236175ecca2568dffa8f6a60e6}{\index{U\-I\-Renderer@{U\-I\-Renderer}!Set\-Tessellation\-Mode@{Set\-Tessellation\-Mode}}
+\index{Set\-Tessellation\-Mode@{Set\-Tessellation\-Mode}!UIRenderer@{U\-I\-Renderer}}
+\subsubsection[{Set\-Tessellation\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void U\-I\-Renderer\-::\-Set\-Tessellation\-Mode (
+\begin{DoxyParamCaption}
+\item[{const int}]{mode}
+\end{DoxyParamCaption}
+)}}\label{class_u_i_renderer_a54d4d9236175ecca2568dffa8f6a60e6}
+
+
+Sets the tesselation mode. 
+
+Default value is Threshold. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mode} & Noesis\-::\-Gui\-::\-Tessellation\-Mode \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_u_i_renderer_a77ab17ad59e589eb32d55699ea1ab1c6}{\index{U\-I\-Renderer@{U\-I\-Renderer}!Set\-Tessellation\-Quality@{Set\-Tessellation\-Quality}}
+\index{Set\-Tessellation\-Quality@{Set\-Tessellation\-Quality}!UIRenderer@{U\-I\-Renderer}}
+\subsubsection[{Set\-Tessellation\-Quality}]{\setlength{\rightskip}{0pt plus 5cm}void U\-I\-Renderer\-::\-Set\-Tessellation\-Quality (
+\begin{DoxyParamCaption}
+\item[{const int}]{quality}
+\end{DoxyParamCaption}
+)}}\label{class_u_i_renderer_a77ab17ad59e589eb32d55699ea1ab1c6}
+
+
+Sets the tesselation quality. 
+
+Default value is Medium. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em quality} & Noesis\-::\-Gui\-::\-Tessellation\-Quality \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_u_i_renderer_a9304bf4f0ff00a671cf45ac5a4198004}{\index{U\-I\-Renderer@{U\-I\-Renderer}!Update@{Update}}
+\index{Update@{Update}!UIRenderer@{U\-I\-Renderer}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void U\-I\-Renderer\-::\-Update (
+\begin{DoxyParamCaption}
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)}}\label{class_u_i_renderer_a9304bf4f0ff00a671cf45ac5a4198004}
+
+
+Update Renderer. 
+
+Updates the noesis kernel, the renderer and the render\-Commands. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em time} & Time in ms \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Integration/\-U\-I/U\-I\-Renderer.\-h\item 
+Integration/\-U\-I/U\-I\-Renderer.\-cpp\end{DoxyCompactItemize}

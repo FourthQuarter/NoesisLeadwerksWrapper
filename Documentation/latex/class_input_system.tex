@@ -1,0 +1,133 @@
+\hypertarget{class_input_system}{\section{Input\-System Class Reference}
+\label{class_input_system}\index{Input\-System@{Input\-System}}
+}
+
+
+Input manager.  
+
+
+
+
+{\ttfamily \#include $<$Input\-System.\-h$>$}
+
+
+
+Collaboration diagram for Input\-System\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{class_input_system__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_input_system_a5ee8dc26e9427ae16adf86343cb37474}{Input\-System} (const size\-\_\-t \&hwnd)
+\begin{DoxyCompactList}\small\item\em Initializes the input system. \end{DoxyCompactList}\item 
+void \hyperlink{class_input_system_a3138ee4e685e64dc5e226f5b5975d143}{Set\-Keyboard\-Listener} (O\-I\-S\-::\-Key\-Listener $\ast$listener)
+\begin{DoxyCompactList}\small\item\em Registers a listener for keyboard events. \end{DoxyCompactList}\item 
+void \hyperlink{class_input_system_a823790cf8427fb7b5106ad12775897c3}{Set\-Mouse\-Listener} (O\-I\-S\-::\-Mouse\-Listener $\ast$listener)
+\begin{DoxyCompactList}\small\item\em Registers a listener for mouse events. \end{DoxyCompactList}\item 
+void \hyperlink{class_input_system_a207aa71ea26739f9f23b6e1ca46e48c9}{Capture\-Keyboard} ()
+\begin{DoxyCompactList}\small\item\em Capture keyboard input. \end{DoxyCompactList}\item 
+void \hyperlink{class_input_system_a4b7c5b2c426479b425926575340a6079}{Capture\-Mouse} ()
+\begin{DoxyCompactList}\small\item\em Capture mouse input. \end{DoxyCompactList}\item 
+void \hyperlink{class_input_system_a32edacdd7c8df35605c5771d422c2b50}{Capture} ()
+\begin{DoxyCompactList}\small\item\em Capture all input. \end{DoxyCompactList}\item 
+\hypertarget{class_input_system_a6361197c001fe46aa6e44cf0936487e1}{void \hyperlink{class_input_system_a6361197c001fe46aa6e44cf0936487e1}{Set\-Display\-Area\-Size} (const int x, const int y)}\label{class_input_system_a6361197c001fe46aa6e44cf0936487e1}
+
+\begin{DoxyCompactList}\small\item\em Set Width / Height of the display area for mouse input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Input manager. 
+
+O\-O\-P input management 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_input_system_a5ee8dc26e9427ae16adf86343cb37474}{\index{Input\-System@{Input\-System}!Input\-System@{Input\-System}}
+\index{Input\-System@{Input\-System}!InputSystem@{Input\-System}}
+\subsubsection[{Input\-System}]{\setlength{\rightskip}{0pt plus 5cm}Input\-System\-::\-Input\-System (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t \&}]{hwnd}
+\end{DoxyParamCaption}
+)}}\label{class_input_system_a5ee8dc26e9427ae16adf86343cb37474}
+
+
+Initializes the input system. 
+
+Creates the input\-System and keyboad objects. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em hwnd} & Current window handle \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_input_system_a32edacdd7c8df35605c5771d422c2b50}{\index{Input\-System@{Input\-System}!Capture@{Capture}}
+\index{Capture@{Capture}!InputSystem@{Input\-System}}
+\subsubsection[{Capture}]{\setlength{\rightskip}{0pt plus 5cm}void Input\-System\-::\-Capture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_input_system_a32edacdd7c8df35605c5771d422c2b50}
+
+
+Capture all input. 
+
+The listeners will only receive input when this method is called once per frame. \hypertarget{class_input_system_a207aa71ea26739f9f23b6e1ca46e48c9}{\index{Input\-System@{Input\-System}!Capture\-Keyboard@{Capture\-Keyboard}}
+\index{Capture\-Keyboard@{Capture\-Keyboard}!InputSystem@{Input\-System}}
+\subsubsection[{Capture\-Keyboard}]{\setlength{\rightskip}{0pt plus 5cm}void Input\-System\-::\-Capture\-Keyboard (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_input_system_a207aa71ea26739f9f23b6e1ca46e48c9}
+
+
+Capture keyboard input. 
+
+The listeners will only receive input from the keyboard when this method is called once per frame. \hypertarget{class_input_system_a4b7c5b2c426479b425926575340a6079}{\index{Input\-System@{Input\-System}!Capture\-Mouse@{Capture\-Mouse}}
+\index{Capture\-Mouse@{Capture\-Mouse}!InputSystem@{Input\-System}}
+\subsubsection[{Capture\-Mouse}]{\setlength{\rightskip}{0pt plus 5cm}void Input\-System\-::\-Capture\-Mouse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_input_system_a4b7c5b2c426479b425926575340a6079}
+
+
+Capture mouse input. 
+
+The listeners will only receive input from the mouse when this method is called once per frame. \hypertarget{class_input_system_a3138ee4e685e64dc5e226f5b5975d143}{\index{Input\-System@{Input\-System}!Set\-Keyboard\-Listener@{Set\-Keyboard\-Listener}}
+\index{Set\-Keyboard\-Listener@{Set\-Keyboard\-Listener}!InputSystem@{Input\-System}}
+\subsubsection[{Set\-Keyboard\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}void Input\-System\-::\-Set\-Keyboard\-Listener (
+\begin{DoxyParamCaption}
+\item[{O\-I\-S\-::\-Key\-Listener $\ast$}]{listener}
+\end{DoxyParamCaption}
+)}}\label{class_input_system_a3138ee4e685e64dc5e226f5b5975d143}
+
+
+Registers a listener for keyboard events. 
+
+\begin{DoxyWarning}{Warning}
+Only one listener supported 
+\end{DoxyWarning}
+\hypertarget{class_input_system_a823790cf8427fb7b5106ad12775897c3}{\index{Input\-System@{Input\-System}!Set\-Mouse\-Listener@{Set\-Mouse\-Listener}}
+\index{Set\-Mouse\-Listener@{Set\-Mouse\-Listener}!InputSystem@{Input\-System}}
+\subsubsection[{Set\-Mouse\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}void Input\-System\-::\-Set\-Mouse\-Listener (
+\begin{DoxyParamCaption}
+\item[{O\-I\-S\-::\-Mouse\-Listener $\ast$}]{listener}
+\end{DoxyParamCaption}
+)}}\label{class_input_system_a823790cf8427fb7b5106ad12775897c3}
+
+
+Registers a listener for mouse events. 
+
+\begin{DoxyWarning}{Warning}
+Only one listener supported 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Integration/\-Input/Input\-System.\-h\item 
+Integration/\-Input/Input\-System.\-cpp\end{DoxyCompactItemize}

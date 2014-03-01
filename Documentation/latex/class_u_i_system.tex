@@ -1,0 +1,105 @@
+\hypertarget{class_u_i_system}{\section{U\-I\-System Class Reference}
+\label{class_u_i_system}\index{U\-I\-System@{U\-I\-System}}
+}
+
+
+Manages all U\-I related renderers.  
+
+
+
+
+{\ttfamily \#include $<$U\-I\-System.\-h$>$}
+
+
+
+Inheritance diagram for U\-I\-System\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{class_u_i_system__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for U\-I\-System\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{class_u_i_system__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_u_i_system_ac930744c42c305f09deacd176045392b}{\hyperlink{class_u_i_system_ac930744c42c305f09deacd176045392b}{U\-I\-System} ()}\label{class_u_i_system_ac930744c42c305f09deacd176045392b}
+
+\begin{DoxyCompactList}\small\item\em Initializes noesis. \end{DoxyCompactList}\item 
+int \hyperlink{class_u_i_system_a5735f001450f7ecd82a4de76558640c6}{Generate\-U\-I\-D} ()
+\begin{DoxyCompactList}\small\item\em Generates a new unique id. \end{DoxyCompactList}\item 
+void \hyperlink{class_u_i_system_abed897e2720483f469cc1d986259ef9b}{Add\-Input\-Listener} (\hyperlink{class_u_i_renderer}{U\-I\-Renderer} $\ast$\&ui\-Renderer)
+\begin{DoxyCompactList}\small\item\em Registers a listener for input events. \end{DoxyCompactList}\item 
+void \hyperlink{class_u_i_system_a74283b6b5d8fb8170e6bae1e6e690255}{Remove\-Input\-Listener} (const int uid)
+\begin{DoxyCompactList}\small\item\em Removes a listener for input events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages all U\-I related renderers. 
+
+Initializes all required noesis components and manages input for the U\-I\-Renderers. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_u_i_system_abed897e2720483f469cc1d986259ef9b}{\index{U\-I\-System@{U\-I\-System}!Add\-Input\-Listener@{Add\-Input\-Listener}}
+\index{Add\-Input\-Listener@{Add\-Input\-Listener}!UISystem@{U\-I\-System}}
+\subsubsection[{Add\-Input\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}void U\-I\-System\-::\-Add\-Input\-Listener (
+\begin{DoxyParamCaption}
+\item[{{\bf U\-I\-Renderer} $\ast$\&}]{ui\-Renderer}
+\end{DoxyParamCaption}
+)}}\label{class_u_i_system_abed897e2720483f469cc1d986259ef9b}
+
+
+Registers a listener for input events. 
+
+\begin{DoxyWarning}{Warning}
+The specified renderer must have an unique id assigned 
+\end{DoxyWarning}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ui\-Renderer} & Listener \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_u_i_system_a5735f001450f7ecd82a4de76558640c6}{\index{U\-I\-System@{U\-I\-System}!Generate\-U\-I\-D@{Generate\-U\-I\-D}}
+\index{Generate\-U\-I\-D@{Generate\-U\-I\-D}!UISystem@{U\-I\-System}}
+\subsubsection[{Generate\-U\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int U\-I\-System\-::\-Generate\-U\-I\-D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_u_i_system_a5735f001450f7ecd82a4de76558640c6}
+
+
+Generates a new unique id. 
+
+\begin{DoxyReturn}{Returns}
+id 
+\end{DoxyReturn}
+\hypertarget{class_u_i_system_a74283b6b5d8fb8170e6bae1e6e690255}{\index{U\-I\-System@{U\-I\-System}!Remove\-Input\-Listener@{Remove\-Input\-Listener}}
+\index{Remove\-Input\-Listener@{Remove\-Input\-Listener}!UISystem@{U\-I\-System}}
+\subsubsection[{Remove\-Input\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}void U\-I\-System\-::\-Remove\-Input\-Listener (
+\begin{DoxyParamCaption}
+\item[{const int}]{uid}
+\end{DoxyParamCaption}
+)}}\label{class_u_i_system_a74283b6b5d8fb8170e6bae1e6e690255}
+
+
+Removes a listener for input events. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em uid} & The uid of the renderer that will be removed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Integration/\-U\-I/U\-I\-System.\-h\item 
+Integration/\-U\-I/U\-I\-System.\-cpp\end{DoxyCompactItemize}
