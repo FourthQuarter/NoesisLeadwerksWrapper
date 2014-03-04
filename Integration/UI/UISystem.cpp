@@ -6,20 +6,39 @@
 #include <NsCore\NsSystem.h>
 #include <NsCore\NsConfig.h>
 
+#ifdef _WIN32
+	#include <Windows.h>
+#endif
+
 void NoesisErrorHandler(const NsChar* filename, NsInt line, const NsChar* desc)
 {
-	throw std::exception(desc);
+	// Print error to console
+	printf("\n----------------------------------------------------\n");
+	printf(" NoesisErrorHandler:\n");
+	printf("----------------------------------------------------\n");
+	printf("%s", desc);
+	printf("\n----------------------------------------------------\n");
+	
+	// Display messagebox
+#ifdef _WIN32
+	MessageBox(0, desc, "NoesisErrorHandler", MB_OK | MB_ICONERROR | MB_SYSTEMMODAL);
+#endif
+
+	//throw std::exception(desc);
+	exit(EXIT_FAILURE);
 }
 
 UISystem::UISystem() : currentUID(1)
 {
 	Noesis::Core::SetErrorHandler(NoesisErrorHandler);
 
+	// Init kernel
 	NsGetKernel()->Init();
 
-	// Select Render
+	// Select render
 	NsConfigValue("Render.RenderSystem", "Render", "GL");
 
+	// Init systems
 	NsGetKernel()->InitSystems();
 }
 
