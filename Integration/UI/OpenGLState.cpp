@@ -81,16 +81,6 @@ void OpenGLState::Store()
 
 	glGetIntegerv(GL_ELEMENT_ARRAY_BUFFER_BINDING, (int*)&renderStates.elementArrayBuffer);
 	glGetIntegerv(GL_VERTEX_ARRAY_BINDING, (int*)&renderStates.vertexArrayBuffer);
-	
-	// Leadwerks fix
-	glPixelStorei(GL_UNPACK_SWAP_BYTES, 0);
-	glPixelStorei(GL_UNPACK_LSB_FIRST, 0);
-	glPixelStorei(GL_UNPACK_ROW_LENGTH, 0);
-	glPixelStorei(GL_UNPACK_IMAGE_HEIGHT, 0);
-	glPixelStorei(GL_UNPACK_SKIP_PIXELS, 0);
-	glPixelStorei(GL_UNPACK_SKIP_ROWS, 0);
-	glPixelStorei(GL_UNPACK_SKIP_IMAGES, 0);
-	//glPixelStorei(GL_UNPACK_ALIGNMENT, 0); <- Bug!
 }
 
 void OpenGLState::Restore()
