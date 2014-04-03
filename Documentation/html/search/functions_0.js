@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['addinputlistener',['AddInputListener',['../class_u_i_system.html#abed897e2720483f469cc1d986259ef9b',1,'UISystem']]]
+  ['addkeyboardlistener',['AddKeyboardListener',['../class_u_i_system.html#a45a982a524c4d35a383232984062e21f',1,'UISystem']]],
+  ['addmouselistener',['AddMouseListener',['../class_u_i_system.html#a51a64e1ed2767a9f57c52195468ea3bf',1,'UISystem']]]
 ];

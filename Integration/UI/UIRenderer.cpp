@@ -1,17 +1,45 @@
-//========= Copyright © 2014, Bryan Andrew King, All rights reserved. ============
+/*********************************************************************************
+ *	The MIT License(MIT)
+ *
+ *	Copyright © 2014, Bryan Andrew King
+ *	All rights reserved.
+ *
+ *  Permission is hereby granted, free of charge, to any person obtaining a copy
+ *	of this software and associated documentation files(the "Software"), to deal
+ *	in the Software without restriction, including without limitation the rights
+ *	to use, copy, modify, merge, publish, distribute, sublicense, and / or sell
+ *	copies of the Software, and to permit persons to whom the Software is
+ *	furnished to do so, subject to the following conditions :
+ *
+ *	The above copyright notice and this permission notice shall be included in all
+ *	copies or substantial portions of the Software.
+ *
+ *	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ *	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ *	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL THE
+ *	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ *	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *	SOFTWARE.
+**********************************************************************************/
 #include "UIRenderer.h"
 #include "OpenGLState.h"
 
 // Noesis
+#include <Noesis.h>
+#include <NsCore\Ptr.h>
+#include <NsGui\IRenderer.h>
+#include <NsGui\FrameworkElement.h>
 #include <NsGui\IUIResource.h>
 #include <NsGui\ResourceDictionary.h>
 #include <NsGui\Collection.h>
 #include <NsGui\Keyboard.h>
-#include "..\Input\OISKeyMappings.h"
 
 using namespace Noesis;
 using namespace Noesis::Gui;
 using namespace Noesis::Core;
+
+RenderCommands renderCommands;
 
 UIRenderer::UIRenderer(const int uid) : uid(-1), renderer(NULL), xaml(NULL), glState(NULL)
 {
@@ -23,15 +51,19 @@ UIRenderer::~UIRenderer()
 {
 	renderCommands.commands.Reset();
 	renderCommands.offscreenCommands.Reset();
-	renderer.Reset();
-	xaml.Reset();
+
+	renderer->Release();
+	xaml->Release();
+
 	delete glState;
 	glState = NULL;
 }
 
 void UIRenderer::Load(std::string xaml, std::string resource)
 {
-	this->xaml = LoadXaml<FrameworkElement>(xaml.c_str());
+	Ptr<FrameworkElement> ptrxaml = LoadXaml<FrameworkElement>(xaml.c_str());
+	this->xaml = ptrxaml.GetPtr();
+	ptrxaml->AddReference();
 
 	if (this->xaml)
 	{
@@ -42,6 +74,7 @@ void UIRenderer::Load(std::string xaml, std::string resource)
 			if (resources)
 			{
 				this->xaml->GetResources()->GetMergedDictionaries()->Add(resources.GetPtr());
+				resources->AddReference();
 			}
 			else
 			{
@@ -49,8 +82,9 @@ void UIRenderer::Load(std::string xaml, std::string resource)
 			}
 		}
 
-		renderer = Gui::CreateRenderer(this->xaml.GetPtr());
-		renderCommands	=  RenderCommands();
+		Ptr<IRenderer> ptrrenderer = Gui::CreateRenderer(this->xaml);
+		renderer = ptrrenderer.GetPtr();
+		ptrrenderer->AddReference();
 	}
 }
 
@@ -63,24 +97,24 @@ void UIRenderer::Update(const double time)
 
 void UIRenderer::MousePosition(const int x, const int y)
 {
-	renderer->MouseMove(x, y);
-	mx = x;
-	my = y;
+	mspos.x = x;
+	mspos.y = y;
+	renderer->MouseMove(mspos.x, mspos.y);
 }
 
 void UIRenderer::MouseButtonDown(const int button)
 {
-	renderer->MouseButtonDown(mx, my, static_cast<MouseButton>(button));
+	renderer->MouseButtonDown(mspos.x, mspos.y, static_cast<MouseButton>(button));
 }
 
 void UIRenderer::MouseButtonUp(const int button)
 {
-	renderer->MouseButtonUp(mx, my, static_cast<MouseButton>(button));
+	renderer->MouseButtonUp(mspos.x, mspos.y, static_cast<MouseButton>(button));
 }
 
 void UIRenderer::MouseWheel(const int rotation)
 {
-	renderer->MouseWheel(mx, my, rotation);
+	renderer->MouseWheel(mspos.x, mspos.y, rotation);
 }
 
 void UIRenderer::Character(const char character)
@@ -97,31 +131,29 @@ void UIRenderer::KeyDown(const int key)
 	NsBool isCtrlPressed = (keyModifiers & ModifierKeys_Control) != 0;
 	NsBool isShiftPressed = (keyModifiers & ModifierKeys_Shift) != 0;
 
-	Key nsKey = s_OISKeyMappings[key];
-
 	// Notify of key event to the UIRenderer
-	renderer->KeyDown(nsKey);
+	renderer->KeyDown(static_cast<Noesis::Gui::Key>(key));
 
 	// Virtual events
-	if (nsKey == Gui::Key_Tab)
+	if (key == Gui::Key_Tab)
 	{
 		renderer->VirtualEvent(isCtrlPressed ?
 							   (isShiftPressed ? VirtualEvent_ControlTabPrev : VirtualEvent_ControlTabNext) :
 							   (isShiftPressed ? VirtualEvent_DirectionalTabPrev : VirtualEvent_DirectionalTabNext));
 	}
-	else if (nsKey == Gui::Key_Left)
+	else if (key == Gui::Key_Left)
 	{
 		renderer->VirtualEvent(VirtualEvent_DirectionalLeft);
 	}
-	else if (nsKey == Gui::Key_Right)
+	else if (key == Gui::Key_Right)
 	{
 		renderer->VirtualEvent(VirtualEvent_DirectionalRight);
 	}
-	else if (nsKey == Gui::Key_Up)
+	else if (key == Gui::Key_Up)
 	{
 		renderer->VirtualEvent(VirtualEvent_DirectionalUp);
 	}
-	else if (nsKey == Gui::Key_Down)
+	else if (key == Gui::Key_Down)
 	{
 		renderer->VirtualEvent(VirtualEvent_DirectionalDown);
 	}
@@ -129,7 +161,7 @@ void UIRenderer::KeyDown(const int key)
 
 void UIRenderer::KeyUp(const int key)
 {
-	renderer->KeyUp(s_OISKeyMappings[key]);
+	renderer->KeyUp(static_cast<Noesis::Gui::Key>(key));
 }
 
 void UIRenderer::RenderOffscreen()
@@ -169,4 +201,9 @@ void UIRenderer::SetOffscreenSize(const int width, const int height, const int m
 void UIRenderer::SetSize(const int width, const int height)
 {
 	renderer->SetSize(width, height);
+}
+
+Noesis::Gui::FrameworkElement*	UIRenderer::GetXAML()
+{
+	return this->xaml;
 }

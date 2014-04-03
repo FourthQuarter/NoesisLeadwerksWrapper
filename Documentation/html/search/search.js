@@ -7,16 +7,18 @@
 
 var indexSectionsWithContent =
 {
-  0: "acgiklmorsu",
-  1: "ioru",
-  2: "acgiklmrsu"
+  0: "acdgklmorsux",
+  1: "oru",
+  2: "acgklmrsu",
+  3: "cdgkmrux"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "functions"
+  2: "functions",
+  3: "variables"
 };
 
 function convertToId(search)

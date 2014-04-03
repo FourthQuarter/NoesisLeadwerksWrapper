@@ -12,20 +12,12 @@ Manages all U\-I related renderers.
 
 
 
-Inheritance diagram for U\-I\-System\-:\nopagebreak
+Collaboration diagram for U\-I\-System\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=291pt]{class_u_i_system__inherit__graph}
-\end{center}
-\end{figure}
-
-
-Collaboration diagram for U\-I\-System\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=291pt]{class_u_i_system__coll__graph}
+\includegraphics[width=350pt]{class_u_i_system__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -36,10 +28,62 @@ Collaboration diagram for U\-I\-System\-:\nopagebreak
 \begin{DoxyCompactList}\small\item\em Initializes noesis. \end{DoxyCompactList}\item 
 int \hyperlink{class_u_i_system_a5735f001450f7ecd82a4de76558640c6}{Generate\-U\-I\-D} ()
 \begin{DoxyCompactList}\small\item\em Generates a new unique id. \end{DoxyCompactList}\item 
-void \hyperlink{class_u_i_system_abed897e2720483f469cc1d986259ef9b}{Add\-Input\-Listener} (\hyperlink{class_u_i_renderer}{U\-I\-Renderer} $\ast$\&ui\-Renderer)
-\begin{DoxyCompactList}\small\item\em Registers a listener for input events. \end{DoxyCompactList}\item 
-void \hyperlink{class_u_i_system_a74283b6b5d8fb8170e6bae1e6e690255}{Remove\-Input\-Listener} (const int uid)
-\begin{DoxyCompactList}\small\item\em Removes a listener for input events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{class_u_i_system_a45a982a524c4d35a383232984062e21f}{Add\-Keyboard\-Listener} (\hyperlink{class_u_i_renderer}{U\-I\-Renderer} $\ast$\&ui\-Renderer)
+\begin{DoxyCompactList}\small\item\em Registers a listener for keyboard input events. \end{DoxyCompactList}\item 
+void \hyperlink{class_u_i_system_a51a64e1ed2767a9f57c52195468ea3bf}{Add\-Mouse\-Listener} (\hyperlink{class_u_i_renderer}{U\-I\-Renderer} $\ast$\&ui\-Renderer)
+\begin{DoxyCompactList}\small\item\em Registers a listener for mouse input events. \end{DoxyCompactList}\item 
+void \hyperlink{class_u_i_system_a01f185ae5eb2dd12607cff3fbaaebad2}{Remove\-Keyboard\-Listener} (const int uid)
+\begin{DoxyCompactList}\small\item\em Removes a listener for keyboard input events. \end{DoxyCompactList}\item 
+void \hyperlink{class_u_i_system_a833da0ec7454752a7872d82051366aad}{Remove\-Mouse\-Listener} (const int uid)
+\begin{DoxyCompactList}\small\item\em Removes a listener for mouse input events. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_system_a2dd00ec5f796185c5d7601ec03c29695}{void \hyperlink{class_u_i_system_a2dd00ec5f796185c5d7601ec03c29695}{Capture\-Keyboard} ()}\label{class_u_i_system_a2dd00ec5f796185c5d7601ec03c29695}
+
+\begin{DoxyCompactList}\small\item\em Capture keyboard input. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_system_a9139946c67db84d93b4a23a42a51eea1}{void \hyperlink{class_u_i_system_a9139946c67db84d93b4a23a42a51eea1}{Capture\-Mouse} ()}\label{class_u_i_system_a9139946c67db84d93b4a23a42a51eea1}
+
+\begin{DoxyCompactList}\small\item\em Capture mouse input. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_system_a29ac5727af1a979e24f4e8a92ff7a5a3}{void \hyperlink{class_u_i_system_a29ac5727af1a979e24f4e8a92ff7a5a3}{Capture} ()}\label{class_u_i_system_a29ac5727af1a979e24f4e8a92ff7a5a3}
+
+\begin{DoxyCompactList}\small\item\em Capture Keyboard and mouse input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_u_i_system_a609dfe50f7414f19e8fc6552807eb4e8}{Convert\-Key} (const int key)
+\begin{DoxyCompactList}\small\item\em Convert Leadwerks V-\/\-Key to Noesis compatible key-\/code. \end{DoxyCompactList}\item 
+int \hyperlink{class_u_i_system_aa6023e6a0d3b6ce665ae4eabb9ef34f7}{Convert\-Mouse\-Key} (const int key)
+\begin{DoxyCompactList}\small\item\em Convert Leadwerks mouse-\/key to Noesis compatible key-\/code. \end{DoxyCompactList}\item 
+int \hyperlink{class_u_i_system_ab10ce968219079f159b53a035e115cee}{Key\-To\-Text} (const int vkey)
+\begin{DoxyCompactList}\small\item\em Converts a vkey to an ascii code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_u_i_system_af9a599a508924e7949de438b95e2ed2f}{std\-::vector$<$ \hyperlink{class_u_i_renderer}{U\-I\-Renderer} $\ast$ $>$ \hyperlink{class_u_i_system_af9a599a508924e7949de438b95e2ed2f}{ms\-Listener}}\label{class_u_i_system_af9a599a508924e7949de438b95e2ed2f}
+
+\begin{DoxyCompactList}\small\item\em Mouse listeners. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_system_ae62a4dc19872c94de26957ccccec9112}{std\-::vector$<$ \hyperlink{class_u_i_renderer}{U\-I\-Renderer} $\ast$ $>$ \hyperlink{class_u_i_system_ae62a4dc19872c94de26957ccccec9112}{kb\-Listener}}\label{class_u_i_system_ae62a4dc19872c94de26957ccccec9112}
+
+\begin{DoxyCompactList}\small\item\em Keyboard listeners. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_system_afa67c850ac0fcebe6d5ce507c2b8fb0b}{int \hyperlink{class_u_i_system_afa67c850ac0fcebe6d5ce507c2b8fb0b}{current\-U\-I\-D}}\label{class_u_i_system_afa67c850ac0fcebe6d5ce507c2b8fb0b}
+
+\begin{DoxyCompactList}\small\item\em Current unique id. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_system_a56a33b6591efa7ee02df81c02c64e7d5}{char \hyperlink{class_u_i_system_a56a33b6591efa7ee02df81c02c64e7d5}{dead\-Key}}\label{class_u_i_system_a56a33b6591efa7ee02df81c02c64e7d5}
+
+\begin{DoxyCompactList}\small\item\em Last found deadkey. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_system_a4b44c8ec919f89201bd36f4652f28751}{bool \hyperlink{class_u_i_system_a4b44c8ec919f89201bd36f4652f28751}{msbuttondown} \mbox{[}5\mbox{]}}\label{class_u_i_system_a4b44c8ec919f89201bd36f4652f28751}
+
+\begin{DoxyCompactList}\small\item\em Keydown state for all mouse buttons. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_system_a43e14bcc1d98c5e8651cde6e194206d7}{Leadwerks\-::\-Vec3 \hyperlink{class_u_i_system_a43e14bcc1d98c5e8651cde6e194206d7}{mspos}}\label{class_u_i_system_a43e14bcc1d98c5e8651cde6e194206d7}
+
+\begin{DoxyCompactList}\small\item\em Mouse position. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_system_a7772c89c41305eddb51133916908a33d}{double {\bfseries last\-Ms\-Wheel\-Pos}}\label{class_u_i_system_a7772c89c41305eddb51133916908a33d}
+
+\item 
+\hypertarget{class_u_i_system_a73ad35f216be30560290a1870caf9c67}{double {\bfseries cur\-Ms\-Wheel\-Pos}}\label{class_u_i_system_a73ad35f216be30560290a1870caf9c67}
+
+\item 
+\hypertarget{class_u_i_system_aaf09f639ae523ee3d7ba186951518ec8}{double {\bfseries ms\-Wheel\-Pos}}\label{class_u_i_system_aaf09f639ae523ee3d7ba186951518ec8}
+
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -48,16 +92,16 @@ Manages all U\-I related renderers.
 Initializes all required noesis components and manages input for the U\-I\-Renderers. 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_u_i_system_abed897e2720483f469cc1d986259ef9b}{\index{U\-I\-System@{U\-I\-System}!Add\-Input\-Listener@{Add\-Input\-Listener}}
-\index{Add\-Input\-Listener@{Add\-Input\-Listener}!UISystem@{U\-I\-System}}
-\subsubsection[{Add\-Input\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}void U\-I\-System\-::\-Add\-Input\-Listener (
+\hypertarget{class_u_i_system_a45a982a524c4d35a383232984062e21f}{\index{U\-I\-System@{U\-I\-System}!Add\-Keyboard\-Listener@{Add\-Keyboard\-Listener}}
+\index{Add\-Keyboard\-Listener@{Add\-Keyboard\-Listener}!UISystem@{U\-I\-System}}
+\subsubsection[{Add\-Keyboard\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}void U\-I\-System\-::\-Add\-Keyboard\-Listener (
 \begin{DoxyParamCaption}
 \item[{{\bf U\-I\-Renderer} $\ast$\&}]{ui\-Renderer}
 \end{DoxyParamCaption}
-)}}\label{class_u_i_system_abed897e2720483f469cc1d986259ef9b}
+)}}\label{class_u_i_system_a45a982a524c4d35a383232984062e21f}
 
 
-Registers a listener for input events. 
+Registers a listener for keyboard input events. 
 
 \begin{DoxyWarning}{Warning}
 The specified renderer must have an unique id assigned 
@@ -67,6 +111,53 @@ The specified renderer must have an unique id assigned
 \mbox{\tt in}  & {\em ui\-Renderer} & Listener \\
 \hline
 \end{DoxyParams}
+\hypertarget{class_u_i_system_a51a64e1ed2767a9f57c52195468ea3bf}{\index{U\-I\-System@{U\-I\-System}!Add\-Mouse\-Listener@{Add\-Mouse\-Listener}}
+\index{Add\-Mouse\-Listener@{Add\-Mouse\-Listener}!UISystem@{U\-I\-System}}
+\subsubsection[{Add\-Mouse\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}void U\-I\-System\-::\-Add\-Mouse\-Listener (
+\begin{DoxyParamCaption}
+\item[{{\bf U\-I\-Renderer} $\ast$\&}]{ui\-Renderer}
+\end{DoxyParamCaption}
+)}}\label{class_u_i_system_a51a64e1ed2767a9f57c52195468ea3bf}
+
+
+Registers a listener for mouse input events. 
+
+\begin{DoxyWarning}{Warning}
+The specified renderer must have an unique id assigned 
+\end{DoxyWarning}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ui\-Renderer} & Listener \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_u_i_system_a609dfe50f7414f19e8fc6552807eb4e8}{\index{U\-I\-System@{U\-I\-System}!Convert\-Key@{Convert\-Key}}
+\index{Convert\-Key@{Convert\-Key}!UISystem@{U\-I\-System}}
+\subsubsection[{Convert\-Key}]{\setlength{\rightskip}{0pt plus 5cm}int U\-I\-System\-::\-Convert\-Key (
+\begin{DoxyParamCaption}
+\item[{const int}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_u_i_system_a609dfe50f7414f19e8fc6552807eb4e8}
+
+
+Convert Leadwerks V-\/\-Key to Noesis compatible key-\/code. 
+
+\begin{DoxyReturn}{Returns}
+Noesis compatible key-\/code 
+\end{DoxyReturn}
+\hypertarget{class_u_i_system_aa6023e6a0d3b6ce665ae4eabb9ef34f7}{\index{U\-I\-System@{U\-I\-System}!Convert\-Mouse\-Key@{Convert\-Mouse\-Key}}
+\index{Convert\-Mouse\-Key@{Convert\-Mouse\-Key}!UISystem@{U\-I\-System}}
+\subsubsection[{Convert\-Mouse\-Key}]{\setlength{\rightskip}{0pt plus 5cm}int U\-I\-System\-::\-Convert\-Mouse\-Key (
+\begin{DoxyParamCaption}
+\item[{const int}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_u_i_system_aa6023e6a0d3b6ce665ae4eabb9ef34f7}
+
+
+Convert Leadwerks mouse-\/key to Noesis compatible key-\/code. 
+
+\begin{DoxyReturn}{Returns}
+Noesis compatible key-\/code 
+\end{DoxyReturn}
 \hypertarget{class_u_i_system_a5735f001450f7ecd82a4de76558640c6}{\index{U\-I\-System@{U\-I\-System}!Generate\-U\-I\-D@{Generate\-U\-I\-D}}
 \index{Generate\-U\-I\-D@{Generate\-U\-I\-D}!UISystem@{U\-I\-System}}
 \subsubsection[{Generate\-U\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int U\-I\-System\-::\-Generate\-U\-I\-D (
@@ -81,16 +172,46 @@ Generates a new unique id.
 \begin{DoxyReturn}{Returns}
 id 
 \end{DoxyReturn}
-\hypertarget{class_u_i_system_a74283b6b5d8fb8170e6bae1e6e690255}{\index{U\-I\-System@{U\-I\-System}!Remove\-Input\-Listener@{Remove\-Input\-Listener}}
-\index{Remove\-Input\-Listener@{Remove\-Input\-Listener}!UISystem@{U\-I\-System}}
-\subsubsection[{Remove\-Input\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}void U\-I\-System\-::\-Remove\-Input\-Listener (
+\hypertarget{class_u_i_system_ab10ce968219079f159b53a035e115cee}{\index{U\-I\-System@{U\-I\-System}!Key\-To\-Text@{Key\-To\-Text}}
+\index{Key\-To\-Text@{Key\-To\-Text}!UISystem@{U\-I\-System}}
+\subsubsection[{Key\-To\-Text}]{\setlength{\rightskip}{0pt plus 5cm}int U\-I\-System\-::\-Key\-To\-Text (
+\begin{DoxyParamCaption}
+\item[{const int}]{vkey}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_u_i_system_ab10ce968219079f159b53a035e115cee}
+
+
+Converts a vkey to an ascii code. 
+
+\begin{DoxyReturn}{Returns}
+Ascii code 
+\end{DoxyReturn}
+\hypertarget{class_u_i_system_a01f185ae5eb2dd12607cff3fbaaebad2}{\index{U\-I\-System@{U\-I\-System}!Remove\-Keyboard\-Listener@{Remove\-Keyboard\-Listener}}
+\index{Remove\-Keyboard\-Listener@{Remove\-Keyboard\-Listener}!UISystem@{U\-I\-System}}
+\subsubsection[{Remove\-Keyboard\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}void U\-I\-System\-::\-Remove\-Keyboard\-Listener (
 \begin{DoxyParamCaption}
 \item[{const int}]{uid}
 \end{DoxyParamCaption}
-)}}\label{class_u_i_system_a74283b6b5d8fb8170e6bae1e6e690255}
+)}}\label{class_u_i_system_a01f185ae5eb2dd12607cff3fbaaebad2}
 
 
-Removes a listener for input events. 
+Removes a listener for keyboard input events. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em uid} & The uid of the renderer that will be removed \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_u_i_system_a833da0ec7454752a7872d82051366aad}{\index{U\-I\-System@{U\-I\-System}!Remove\-Mouse\-Listener@{Remove\-Mouse\-Listener}}
+\index{Remove\-Mouse\-Listener@{Remove\-Mouse\-Listener}!UISystem@{U\-I\-System}}
+\subsubsection[{Remove\-Mouse\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}void U\-I\-System\-::\-Remove\-Mouse\-Listener (
+\begin{DoxyParamCaption}
+\item[{const int}]{uid}
+\end{DoxyParamCaption}
+)}}\label{class_u_i_system_a833da0ec7454752a7872d82051366aad}
+
+
+Removes a listener for mouse input events. 
 
 
 \begin{DoxyParams}[1]{Parameters}

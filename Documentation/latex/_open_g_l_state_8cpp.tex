@@ -1,0 +1,39 @@
+\hypertarget{_open_g_l_state_8cpp}{\section{Integration/\-U\-I/\-Open\-G\-L\-State.cpp File Reference}
+\label{_open_g_l_state_8cpp}\index{Integration/\-U\-I/\-Open\-G\-L\-State.\-cpp@{Integration/\-U\-I/\-Open\-G\-L\-State.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}Open\-G\-L\-State.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$Noesis.\-h$>$}\\*
+Include dependency graph for Open\-G\-L\-State.\-cpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_open_g_l_state_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_open_g_l_state_8cpp_a9ebabd5a73bd1c03f3002b4f1e019a3e}{G\-L\-\_\-\-I\-M\-P\-O\-R\-T}(\-\_\-proto, \-\_\-func)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_open_g_l_state_8cpp_a9ebabd5a73bd1c03f3002b4f1e019a3e}{\index{Open\-G\-L\-State.\-cpp@{Open\-G\-L\-State.\-cpp}!G\-L\-\_\-\-I\-M\-P\-O\-R\-T@{G\-L\-\_\-\-I\-M\-P\-O\-R\-T}}
+\index{G\-L\-\_\-\-I\-M\-P\-O\-R\-T@{G\-L\-\_\-\-I\-M\-P\-O\-R\-T}!OpenGLState.cpp@{Open\-G\-L\-State.\-cpp}}
+\subsubsection[{G\-L\-\_\-\-I\-M\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-\_\-\-I\-M\-P\-O\-R\-T(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-proto, }
+\item[{}]{\-\_\-func}
+\end{DoxyParamCaption}
+)}}\label{_open_g_l_state_8cpp_a9ebabd5a73bd1c03f3002b4f1e019a3e}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\{ \(\backslash\)
+        \_func = (\_proto)wglGetProcAddress(#\_func); \(\backslash\)
+        if (\_func == NULL) \(\backslash\)
+        \{ \(\backslash\)
+        printf(\textcolor{stringliteral}{"wglGetProcAddress %s"}, #\_func); \(\backslash\)
+        \} \(\backslash\)
+    \}
+\end{DoxyCode}

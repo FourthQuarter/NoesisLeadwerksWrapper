@@ -30,6 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">NoesisLeadwerksWrapper
+   &#160;<span id="projectnumber">0.3</span>
    </div>
    <div id="projectbrief">NLW</div>
   </td>
@@ -69,7 +70,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li class="current"><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -77,20 +77,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
+      <li><a href="functions_vars.html"><span>Variables</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
     <ul class="tablist">
       <li><a href="#index_a"><span>a</span></a></li>
       <li><a href="#index_c"><span>c</span></a></li>
+      <li><a href="#index_d"><span>d</span></a></li>
       <li><a href="#index_g"><span>g</span></a></li>
-      <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_k"><span>k</span></a></li>
       <li><a href="#index_l"><span>l</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
-      <li class="current"><a href="#index_u"><span>u</span></a></li>
+      <li><a href="#index_u"><span>u</span></a></li>
+      <li class="current"><a href="#index_x"><span>x</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -113,7 +115,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -126,24 +128,43 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div>
 
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
-<li>AddInputListener()
-: <a class="el" href="class_u_i_system.html#abed897e2720483f469cc1d986259ef9b">UISystem</a>
+<li>AddKeyboardListener()
+: <a class="el" href="class_u_i_system.html#a45a982a524c4d35a383232984062e21f">UISystem</a>
+</li>
+<li>AddMouseListener()
+: <a class="el" href="class_u_i_system.html#a51a64e1ed2767a9f57c52195468ea3bf">UISystem</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
 <li>Capture()
-: <a class="el" href="class_input_system.html#a32edacdd7c8df35605c5771d422c2b50">InputSystem</a>
+: <a class="el" href="class_u_i_system.html#a29ac5727af1a979e24f4e8a92ff7a5a3">UISystem</a>
 </li>
 <li>CaptureKeyboard()
-: <a class="el" href="class_input_system.html#a207aa71ea26739f9f23b6e1ca46e48c9">InputSystem</a>
+: <a class="el" href="class_u_i_system.html#a2dd00ec5f796185c5d7601ec03c29695">UISystem</a>
 </li>
 <li>CaptureMouse()
-: <a class="el" href="class_input_system.html#a4b7c5b2c426479b425926575340a6079">InputSystem</a>
+: <a class="el" href="class_u_i_system.html#a9139946c67db84d93b4a23a42a51eea1">UISystem</a>
 </li>
 <li>Character()
 : <a class="el" href="class_u_i_renderer.html#ac6c071a178d51415329bf4f4f71dfd48">UIRenderer</a>
+</li>
+<li>ConvertKey()
+: <a class="el" href="class_u_i_system.html#a609dfe50f7414f19e8fc6552807eb4e8">UISystem</a>
+</li>
+<li>ConvertMouseKey()
+: <a class="el" href="class_u_i_system.html#aa6023e6a0d3b6ce665ae4eabb9ef34f7">UISystem</a>
+</li>
+<li>currentUID
+: <a class="el" href="class_u_i_system.html#afa67c850ac0fcebe6d5ce507c2b8fb0b">UISystem</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
+<li>deadKey
+: <a class="el" href="class_u_i_system.html#a56a33b6591efa7ee02df81c02c64e7d5">UISystem</a>
 </li>
 </ul>
 
@@ -153,24 +174,26 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="class_u_i_system.html#a5735f001450f7ecd82a4de76558640c6">UISystem</a>
 </li>
 <li>GetUID()
-: <a class="el" href="class_u_i_renderer.html#a2c06181bfd9133704b5bdd17e1e1fd58">UIRenderer</a>
+: <a class="el" href="class_u_i_renderer.html#a45454e14885545c166a795d4a0884a38">UIRenderer</a>
 </li>
 <li>GetXAML()
-: <a class="el" href="class_u_i_renderer.html#a64312ae42b4990ba165f9bea9dc85f48">UIRenderer</a>
+: <a class="el" href="class_u_i_renderer.html#a0989015bf54f7b6c624829c1fbf284d7">UIRenderer</a>
 </li>
-</ul>
-
-
-<h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
-<li>InputSystem()
-: <a class="el" href="class_input_system.html#a5ee8dc26e9427ae16adf86343cb37474">InputSystem</a>
+<li>glState
+: <a class="el" href="class_u_i_renderer.html#a44cffd1da636ee3d5a03ebee3e880d26">UIRenderer</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_k"></a>- k -</h3><ul>
+<li>kbListener
+: <a class="el" href="class_u_i_system.html#ae62a4dc19872c94de26957ccccec9112">UISystem</a>
+</li>
 <li>KeyDown()
 : <a class="el" href="class_u_i_renderer.html#af0f5ee9edad9a7a35b46187d3fb697ea">UIRenderer</a>
+</li>
+<li>KeyToText()
+: <a class="el" href="class_u_i_system.html#ab10ce968219079f159b53a035e115cee">UISystem</a>
 </li>
 <li>KeyUp()
 : <a class="el" href="class_u_i_renderer.html#acf25d6ac3df945fde9054c34bf28edd1">UIRenderer</a>
@@ -198,15 +221,31 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>MouseWheel()
 : <a class="el" href="class_u_i_renderer.html#a02a32cecd924b8a855bce495672f8e4e">UIRenderer</a>
 </li>
+<li>msbuttondown
+: <a class="el" href="class_u_i_system.html#a4b44c8ec919f89201bd36f4652f28751">UISystem</a>
+</li>
+<li>msListener
+: <a class="el" href="class_u_i_system.html#af9a599a508924e7949de438b95e2ed2f">UISystem</a>
+</li>
+<li>mspos
+: <a class="el" href="class_u_i_renderer.html#ab365eca2491514a80282a621626920d6">UIRenderer</a>
+, <a class="el" href="class_u_i_system.html#a43e14bcc1d98c5e8651cde6e194206d7">UISystem</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
-<li>RemoveInputListener()
-: <a class="el" href="class_u_i_system.html#a74283b6b5d8fb8170e6bae1e6e690255">UISystem</a>
+<li>RemoveKeyboardListener()
+: <a class="el" href="class_u_i_system.html#a01f185ae5eb2dd12607cff3fbaaebad2">UISystem</a>
+</li>
+<li>RemoveMouseListener()
+: <a class="el" href="class_u_i_system.html#a833da0ec7454752a7872d82051366aad">UISystem</a>
 </li>
 <li>Render()
 : <a class="el" href="class_u_i_renderer.html#a6961b53c2f5bf48d18c5164aaf5785d6">UIRenderer</a>
+</li>
+<li>renderer
+: <a class="el" href="class_u_i_renderer.html#a9f78449d8d996e66f1e1d75c3cd6276f">UIRenderer</a>
 </li>
 <li>RenderOffscreen()
 : <a class="el" href="class_u_i_renderer.html#a1299a480654f95b593f1b22117e2324a">UIRenderer</a>
@@ -220,15 +259,6 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
 <li>SetAntialiasingMode()
 : <a class="el" href="class_u_i_renderer.html#a05d5fed9d98c02a150efeb8e6ea36812">UIRenderer</a>
-</li>
-<li>SetDisplayAreaSize()
-: <a class="el" href="class_input_system.html#a6361197c001fe46aa6e44cf0936487e1">InputSystem</a>
-</li>
-<li>SetKeyboardListener()
-: <a class="el" href="class_input_system.html#a3138ee4e685e64dc5e226f5b5975d143">InputSystem</a>
-</li>
-<li>SetMouseListener()
-: <a class="el" href="class_input_system.html#a823790cf8427fb7b5106ad12775897c3">InputSystem</a>
 </li>
 <li>SetOffscreenSize()
 : <a class="el" href="class_u_i_renderer.html#ad8eacb018b912e5d7786ca6f1642b4ce">UIRenderer</a>
@@ -249,6 +279,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
+<li>uid
+: <a class="el" href="class_u_i_renderer.html#a191e33b40b855c04117de4d49d48e99b">UIRenderer</a>
+</li>
 <li>UIRenderer()
 : <a class="el" href="class_u_i_renderer.html#a8e0fb11ab4e123f3524756e276199351">UIRenderer</a>
 </li>
@@ -259,12 +292,19 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="class_u_i_renderer.html#a9304bf4f0ff00a671cf45ac5a4198004">UIRenderer</a>
 </li>
 </ul>
+
+
+<h3><a class="anchor" id="index_x"></a>- x -</h3><ul>
+<li>xaml
+: <a class="el" href="class_u_i_renderer.html#ad9cc0fe1fcbf5e5182f7a18045c4ec07">UIRenderer</a>
+</li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Mar 1 2014 16:03:36 for NoesisLeadwerksWrapper by
+    <li class="footer">Generated on Thu Apr 3 2014 16:35:59 for NoesisLeadwerksWrapper by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

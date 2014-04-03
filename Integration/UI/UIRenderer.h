@@ -1,14 +1,43 @@
-//========= Copyright © 2014, Bryan Andrew King, All rights reserved. ============
+/*********************************************************************************
+*	The MIT License(MIT)
+*
+*	Copyright © 2014, Bryan Andrew King
+*	All rights reserved.
+*
+*  Permission is hereby granted, free of charge, to any person obtaining a copy
+*	of this software and associated documentation files(the "Software"), to deal
+*	in the Software without restriction, including without limitation the rights
+*	to use, copy, modify, merge, publish, distribute, sublicense, and / or sell
+*	copies of the Software, and to permit persons to whom the Software is
+*	furnished to do so, subject to the following conditions :
+*
+*	The above copyright notice and this permission notice shall be included in all
+*	copies or substantial portions of the Software.
+*
+*	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+*	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+*	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL THE
+*	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+*	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+*	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+*	SOFTWARE.
+**********************************************************************************/
 #ifndef UI_RENDERER_H
 #define UI_RENDERER_H
 
-// Bad dependencies
-#include <Noesis.h>
-#include <NsCore\Ptr.h>
-#include <NsGui\IRenderer.h>
-#include <NsGui\FrameworkElement.h>
+#include <Leadwerks.h>
 
 class OpenGLState;
+
+namespace Noesis
+{
+	namespace Gui
+	{
+		class IRenderer;
+		class RenderCommands;
+		class FrameworkElement;
+	}
+}
 
 /**
  * \class UIRenderer
@@ -18,11 +47,11 @@ class UIRenderer
 {
 private:
 	int													uid; ///< Unique id
-	Noesis::Ptr<Noesis::Gui::IRenderer>					renderer; ///< Actual UIRenderer
-	Noesis::Gui::RenderCommands							renderCommands;
-	Noesis::Ptr<Noesis::Gui::FrameworkElement>			xaml; ///< Loaded xaml file
 	OpenGLState*										glState; ///< OpenGL state
-	int													mx, my; ///< Mouse coordinates
+	Leadwerks::Vec3										mspos; ///< Last known mouse position
+	Noesis::Gui::IRenderer*								renderer; ///< Actual renderer
+	Noesis::Gui::FrameworkElement*						xaml; ///< Loaded xaml
+
 
 public:
 	/**
@@ -67,6 +96,7 @@ public:
 	 * \brief Sends the specified key to the renderer
 	 */
 	void	Character(const char character);
+
 	/**
 	 * \brief Notifies renderer that a key was pressed
 	 */
@@ -125,13 +155,13 @@ public:
 	 * \brief Returns the renderers uid.
 	 * \return uid
 	 */
-	inline  short	GetUID(){ return uid; } 
+	inline  int	GetUID(){ return uid; } 
 
 	/**
 	 * \brief Returns the loaded XAML
 	 * \return XAML
 	 */
-	Noesis::Gui::FrameworkElement*	GetXAML() { return xaml.GetPtr(); }
+	Noesis::Gui::FrameworkElement*	GetXAML();
 };
 
 #endif//UI_RENDERER_H

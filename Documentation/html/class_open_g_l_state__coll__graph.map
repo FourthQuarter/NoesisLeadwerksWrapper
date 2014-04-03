@@ -1,2 +1,3 @@
 <map id="OpenGLState" name="OpenGLState">
+<area shape="rect" id="node10" href="$struct_render_states.html" title="{RenderStates\n|+ frameBuffer\l+ viewport\l+ clearStencil\l+ depthFunc\l+ stencilTestFailOp\l+ stencilTestSPDF\l+ stencilFunc\l+ stencilRef\l+ stencilWriteMask\l+ cullFaceMode\l+ dither\l+ blendEquation\l+ blendSource\l+ unpackAlignment\l|}" alt="" coords="2134,294,2268,562"/>
 </map>

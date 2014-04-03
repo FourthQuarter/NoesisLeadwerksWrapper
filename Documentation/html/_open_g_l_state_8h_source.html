@@ -30,6 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">NoesisLeadwerksWrapper
+   &#160;<span id="projectnumber">0.3</span>
    </div>
    <div id="projectbrief">NLW</div>
   </td>
@@ -90,7 +91,7 @@ $(document).ready(function(){initNavTree('_open_g_l_state_8h_source.html','');})
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -104,49 +105,73 @@ $(document).ready(function(){initNavTree('_open_g_l_state_8h_source.html','');})
 <div class="title">OpenGLState.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OPENGL_STATE_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define OPENGL_STATE_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;RenderStates.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;Leadwerks.h&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;GL\GL.h&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;GL\glew.h&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_open_g_l_state.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_open_g_l_state.html">OpenGLState</a></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="struct_render_states.html">RenderStates</a>                            renderStates;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    PFNGLBINDFRAMEBUFFERPROC                glBindFramebuffer;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    PFNGLBINDBUFFERPROC                     glBindBuffer;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    PFNGLACTIVETEXTUREPROC                  glActiveTexture;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    PFNGLUSEPROGRAMPROC                     glUseProgram;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    PFNGLGETVERTEXATTRIBIVPROC              glGetVertexAttribiv;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    PFNGLENABLEVERTEXATTRIBARRAYARBPROC     glEnableVertexAttribArray;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    PFNGLDISABLEVERTEXATTRIBARRAYARBPROC    glDisableVertexAttribArray;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    PFNGLBLENDEQUATIONPROC                  glBlendEquation;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    PFNGLBINDVERTEXARRAYPROC                glBindVertexArray;</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">*   The MIT License(MIT)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*   Copyright © 2014, Noesis Technologies S.L. and Bryan Andrew King</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">*   All rights reserved.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">*  Permission is hereby granted, free of charge, to any person obtaining a copy</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">*   of this software and associated documentation files(the &quot;Software&quot;), to deal</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">*   in the Software without restriction, including without limitation the rights</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">*   to use, copy, modify, merge, publish, distribute, sublicense, and / or sell</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">*   copies of the Software, and to permit persons to whom the Software is</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">*   furnished to do so, subject to the following conditions :</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">*   The above copyright notice and this permission notice shall be included in all</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">*   copies or substantial portions of the Software.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">*   THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">*   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">*   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">*   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">*   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">*   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">*   SOFTWARE.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">**********************************************************************************/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef OPENGL_STATE_H</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define OPENGL_STATE_H</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;RenderStates.h&quot;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_open_g_l_state.html">OpenGLState</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_open_g_l_state.html#a8078b65f6b29b681960ba03b6d35160e">Store</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_open_g_l_state.html#a08189bfef75f3408539b1e570d14d838">Restore</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif//OPENGL_STATE_H</span></div>
-<div class="ttc" id="class_open_g_l_state_html_a08189bfef75f3408539b1e570d14d838"><div class="ttname"><a href="class_open_g_l_state.html#a08189bfef75f3408539b1e570d14d838">OpenGLState::Restore</a></div><div class="ttdeci">void Restore()</div><div class="ttdoc">Restores the stored gpu state. </div><div class="ttdef"><b>Definition:</b> OpenGLState.cpp:96</div></div>
-<div class="ttc" id="class_open_g_l_state_html"><div class="ttname"><a href="class_open_g_l_state.html">OpenGLState</a></div><div class="ttdoc">Stores and restores the current GPU state. </div><div class="ttdef"><b>Definition:</b> OpenGLState.h:15</div></div>
-<div class="ttc" id="struct_render_states_html"><div class="ttname"><a href="struct_render_states.html">RenderStates</a></div><div class="ttdef"><b>Definition:</b> RenderStates.h:5</div></div>
-<div class="ttc" id="class_open_g_l_state_html_a8078b65f6b29b681960ba03b6d35160e"><div class="ttname"><a href="class_open_g_l_state.html#a8078b65f6b29b681960ba03b6d35160e">OpenGLState::Store</a></div><div class="ttdeci">void Store()</div><div class="ttdoc">Stores the current gpu state. </div><div class="ttdef"><b>Definition:</b> OpenGLState.cpp:27</div></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;Leadwerks.h&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;GL\GL.h&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;GL\glew.h&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_open_g_l_state.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_open_g_l_state.html">OpenGLState</a></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="struct_render_states.html">RenderStates</a>                            renderStates;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    PFNGLBINDFRAMEBUFFERPROC                glBindFramebuffer;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    PFNGLBINDBUFFERPROC                     glBindBuffer;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    PFNGLACTIVETEXTUREPROC                  glActiveTexture;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    PFNGLUSEPROGRAMPROC                     glUseProgram;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    PFNGLGETVERTEXATTRIBIVPROC              glGetVertexAttribiv;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    PFNGLENABLEVERTEXATTRIBARRAYARBPROC     glEnableVertexAttribArray;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    PFNGLDISABLEVERTEXATTRIBARRAYARBPROC    glDisableVertexAttribArray;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    PFNGLBLENDEQUATIONPROC                  glBlendEquation;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    PFNGLBINDVERTEXARRAYPROC                glBindVertexArray;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="class_open_g_l_state.html">OpenGLState</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_open_g_l_state.html#a8078b65f6b29b681960ba03b6d35160e">Store</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_open_g_l_state.html#a08189bfef75f3408539b1e570d14d838">Restore</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif//OPENGL_STATE_H</span></div>
+<div class="ttc" id="class_open_g_l_state_html_a08189bfef75f3408539b1e570d14d838"><div class="ttname"><a href="class_open_g_l_state.html#a08189bfef75f3408539b1e570d14d838">OpenGLState::Restore</a></div><div class="ttdeci">void Restore()</div><div class="ttdoc">Restores the stored gpu state. </div><div class="ttdef"><b>Definition:</b> OpenGLState.cpp:110</div></div>
+<div class="ttc" id="class_open_g_l_state_html"><div class="ttname"><a href="class_open_g_l_state.html">OpenGLState</a></div><div class="ttdoc">Stores and restores the current GPU state. </div><div class="ttdef"><b>Definition:</b> OpenGLState.h:39</div></div>
+<div class="ttc" id="struct_render_states_html"><div class="ttname"><a href="struct_render_states.html">RenderStates</a></div><div class="ttdef"><b>Definition:</b> RenderStates.h:28</div></div>
+<div class="ttc" id="class_open_g_l_state_html_a8078b65f6b29b681960ba03b6d35160e"><div class="ttname"><a href="class_open_g_l_state.html#a8078b65f6b29b681960ba03b6d35160e">OpenGLState::Store</a></div><div class="ttdeci">void Store()</div><div class="ttdoc">Stores the current gpu state. </div><div class="ttdef"><b>Definition:</b> OpenGLState.cpp:51</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_eecb7863cc5539e333a9a51474f7e532.html">Integration</a></li><li class="navelem"><a class="el" href="dir_6fe0489f0f38986360ceb0efd22938da.html">UI</a></li><li class="navelem"><b>OpenGLState.h</b></li>
-    <li class="footer">Generated on Sat Mar 1 2014 16:03:36 for NoesisLeadwerksWrapper by
+    <li class="footer">Generated on Thu Apr 3 2014 16:35:59 for NoesisLeadwerksWrapper by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

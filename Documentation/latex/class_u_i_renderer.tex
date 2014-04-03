@@ -12,11 +12,12 @@ X\-A\-M\-L Renderer.
 
 
 
-Collaboration diagram for U\-I\-Renderer\-:\nopagebreak
+Collaboration diagram for U\-I\-Renderer\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=208pt]{class_u_i_renderer__coll__graph}
+\includegraphics[width=350pt]{class_u_i_renderer__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -25,7 +26,7 @@ Collaboration diagram for U\-I\-Renderer\-:\nopagebreak
 \hypertarget{class_u_i_renderer_a8e0fb11ab4e123f3524756e276199351}{\hyperlink{class_u_i_renderer_a8e0fb11ab4e123f3524756e276199351}{U\-I\-Renderer} (const int id)}\label{class_u_i_renderer_a8e0fb11ab4e123f3524756e276199351}
 
 \begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{class_u_i_renderer}{U\-I\-Renderer}. \end{DoxyCompactList}\item 
-void \hyperlink{class_u_i_renderer_a8e61394cd4b9dcf2242f1ec47e95ba5d}{Load} (std\-::string xaml, std\-::string resource=\char`\"{}\char`\"{})
+void \hyperlink{class_u_i_renderer_a8e61394cd4b9dcf2242f1ec47e95ba5d}{Load} (std\-::string \hyperlink{class_u_i_renderer_ad9cc0fe1fcbf5e5182f7a18045c4ec07}{xaml}, std\-::string resource=\char`\"{}\char`\"{})
 \begin{DoxyCompactList}\small\item\em Loads the specified xaml. \end{DoxyCompactList}\item 
 void \hyperlink{class_u_i_renderer_a9304bf4f0ff00a671cf45ac5a4198004}{Update} (const double time)
 \begin{DoxyCompactList}\small\item\em Update Renderer. \end{DoxyCompactList}\item 
@@ -67,23 +68,41 @@ void \hyperlink{class_u_i_renderer_a54d4d9236175ecca2568dffa8f6a60e6}{Set\-Tesse
 \begin{DoxyCompactList}\small\item\em Sets the tesselation mode. \end{DoxyCompactList}\item 
 void \hyperlink{class_u_i_renderer_ad8eacb018b912e5d7786ca6f1642b4ce}{Set\-Offscreen\-Size} (const int width, const int height, const int multisample)
 \begin{DoxyCompactList}\small\item\em Set offscreen rendering quality. \end{DoxyCompactList}\item 
-short \hyperlink{class_u_i_renderer_a2c06181bfd9133704b5bdd17e1e1fd58}{Get\-U\-I\-D} ()
+int \hyperlink{class_u_i_renderer_a45454e14885545c166a795d4a0884a38}{Get\-U\-I\-D} ()
 \begin{DoxyCompactList}\small\item\em Returns the renderers uid. \end{DoxyCompactList}\item 
-Noesis\-::\-Gui\-::\-Framework\-Element $\ast$ \hyperlink{class_u_i_renderer_a64312ae42b4990ba165f9bea9dc85f48}{Get\-X\-A\-M\-L} ()
+Noesis\-::\-Gui\-::\-Framework\-Element $\ast$ \hyperlink{class_u_i_renderer_a0989015bf54f7b6c624829c1fbf284d7}{Get\-X\-A\-M\-L} ()
 \begin{DoxyCompactList}\small\item\em Returns the loaded X\-A\-M\-L. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_u_i_renderer_a191e33b40b855c04117de4d49d48e99b}{int \hyperlink{class_u_i_renderer_a191e33b40b855c04117de4d49d48e99b}{uid}}\label{class_u_i_renderer_a191e33b40b855c04117de4d49d48e99b}
+
+\begin{DoxyCompactList}\small\item\em Unique id. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_renderer_a44cffd1da636ee3d5a03ebee3e880d26}{\hyperlink{class_open_g_l_state}{Open\-G\-L\-State} $\ast$ \hyperlink{class_u_i_renderer_a44cffd1da636ee3d5a03ebee3e880d26}{gl\-State}}\label{class_u_i_renderer_a44cffd1da636ee3d5a03ebee3e880d26}
+
+\begin{DoxyCompactList}\small\item\em Open\-G\-L state. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_renderer_ab365eca2491514a80282a621626920d6}{Leadwerks\-::\-Vec3 \hyperlink{class_u_i_renderer_ab365eca2491514a80282a621626920d6}{mspos}}\label{class_u_i_renderer_ab365eca2491514a80282a621626920d6}
+
+\begin{DoxyCompactList}\small\item\em Last known mouse position. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_renderer_a9f78449d8d996e66f1e1d75c3cd6276f}{Noesis\-::\-Gui\-::\-I\-Renderer $\ast$ \hyperlink{class_u_i_renderer_a9f78449d8d996e66f1e1d75c3cd6276f}{renderer}}\label{class_u_i_renderer_a9f78449d8d996e66f1e1d75c3cd6276f}
+
+\begin{DoxyCompactList}\small\item\em Actual renderer. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_renderer_ad9cc0fe1fcbf5e5182f7a18045c4ec07}{Noesis\-::\-Gui\-::\-Framework\-Element $\ast$ \hyperlink{class_u_i_renderer_ad9cc0fe1fcbf5e5182f7a18045c4ec07}{xaml}}\label{class_u_i_renderer_ad9cc0fe1fcbf5e5182f7a18045c4ec07}
+
+\begin{DoxyCompactList}\small\item\em Loaded xaml. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 X\-A\-M\-L Renderer. 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_u_i_renderer_a2c06181bfd9133704b5bdd17e1e1fd58}{\index{U\-I\-Renderer@{U\-I\-Renderer}!Get\-U\-I\-D@{Get\-U\-I\-D}}
+\hypertarget{class_u_i_renderer_a45454e14885545c166a795d4a0884a38}{\index{U\-I\-Renderer@{U\-I\-Renderer}!Get\-U\-I\-D@{Get\-U\-I\-D}}
 \index{Get\-U\-I\-D@{Get\-U\-I\-D}!UIRenderer@{U\-I\-Renderer}}
-\subsubsection[{Get\-U\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}short U\-I\-Renderer\-::\-Get\-U\-I\-D (
+\subsubsection[{Get\-U\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int U\-I\-Renderer\-::\-Get\-U\-I\-D (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_u_i_renderer_a2c06181bfd9133704b5bdd17e1e1fd58}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_u_i_renderer_a45454e14885545c166a795d4a0884a38}
 
 
 Returns the renderers uid. 
@@ -91,13 +110,13 @@ Returns the renderers uid.
 \begin{DoxyReturn}{Returns}
 uid 
 \end{DoxyReturn}
-\hypertarget{class_u_i_renderer_a64312ae42b4990ba165f9bea9dc85f48}{\index{U\-I\-Renderer@{U\-I\-Renderer}!Get\-X\-A\-M\-L@{Get\-X\-A\-M\-L}}
+\hypertarget{class_u_i_renderer_a0989015bf54f7b6c624829c1fbf284d7}{\index{U\-I\-Renderer@{U\-I\-Renderer}!Get\-X\-A\-M\-L@{Get\-X\-A\-M\-L}}
 \index{Get\-X\-A\-M\-L@{Get\-X\-A\-M\-L}!UIRenderer@{U\-I\-Renderer}}
-\subsubsection[{Get\-X\-A\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}Noesis\-::\-Gui\-::\-Framework\-Element$\ast$ U\-I\-Renderer\-::\-Get\-X\-A\-M\-L (
+\subsubsection[{Get\-X\-A\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}Noesis\-::\-Gui\-::\-Framework\-Element $\ast$ U\-I\-Renderer\-::\-Get\-X\-A\-M\-L (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_u_i_renderer_a64312ae42b4990ba165f9bea9dc85f48}
+)}}\label{class_u_i_renderer_a0989015bf54f7b6c624829c1fbf284d7}
 
 
 Returns the loaded X\-A\-M\-L. 

@@ -30,6 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">NoesisLeadwerksWrapper
+   &#160;<span id="projectnumber">0.3</span>
    </div>
    <div id="projectbrief">NLW</div>
   </td>
@@ -69,7 +70,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('class_open_g_l_state.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -105,6 +105,7 @@ $(document).ready(function(){initNavTree('class_open_g_l_state.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_open_g_l_state-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">OpenGLState Class Reference</div>  </div>
@@ -119,6 +120,8 @@ $(document).ready(function(){initNavTree('class_open_g_l_state.html','');});
 Collaboration diagram for OpenGLState:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_open_g_l_state__coll__graph.png" border="0" usemap="#_open_g_l_state_coll__map" alt="Collaboration graph"/></div>
+<map name="_open_g_l_state_coll__map" id="_open_g_l_state_coll__map">
+<area shape="rect" id="node10" href="struct_render_states.html" title="{RenderStates\n|+ frameBuffer\l+ viewport\l+ clearStencil\l+ depthFunc\l+ stencilTestFailOp\l+ stencilTestSPDF\l+ stencilFunc\l+ stencilRef\l+ stencilWriteMask\l+ cullFaceMode\l+ dither\l+ blendEquation\l+ blendSource\l+ unpackAlignment\l|}" alt="" coords="2134,294,2268,562"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -131,6 +134,39 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_g_l_state.html#a08189bfef75f3408539b1e570d14d838">Restore</a> ()</td></tr>
 <tr class="memdesc:a08189bfef75f3408539b1e570d14d838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restores the stored gpu state. <br/></td></tr>
 <tr class="separator:a08189bfef75f3408539b1e570d14d838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a52e2325cc665c673b59eb43ce611a841"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52e2325cc665c673b59eb43ce611a841"></a>
+<a class="el" href="struct_render_states.html">RenderStates</a>&#160;</td><td class="memItemRight" valign="bottom"><b>renderStates</b></td></tr>
+<tr class="separator:a52e2325cc665c673b59eb43ce611a841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a580ee79f804a92e55b95c4910b2254e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a580ee79f804a92e55b95c4910b2254e5"></a>
+PFNGLBINDFRAMEBUFFERPROC&#160;</td><td class="memItemRight" valign="bottom"><b>glBindFramebuffer</b></td></tr>
+<tr class="separator:a580ee79f804a92e55b95c4910b2254e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a190e392c9aad9ccef7e947b7273c7522"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a190e392c9aad9ccef7e947b7273c7522"></a>
+PFNGLBINDBUFFERPROC&#160;</td><td class="memItemRight" valign="bottom"><b>glBindBuffer</b></td></tr>
+<tr class="separator:a190e392c9aad9ccef7e947b7273c7522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4522af78a19fa306ecae319663411014"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4522af78a19fa306ecae319663411014"></a>
+PFNGLACTIVETEXTUREPROC&#160;</td><td class="memItemRight" valign="bottom"><b>glActiveTexture</b></td></tr>
+<tr class="separator:a4522af78a19fa306ecae319663411014"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d20b98a10b8deff956ad4a788f2790e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d20b98a10b8deff956ad4a788f2790e"></a>
+PFNGLUSEPROGRAMPROC&#160;</td><td class="memItemRight" valign="bottom"><b>glUseProgram</b></td></tr>
+<tr class="separator:a9d20b98a10b8deff956ad4a788f2790e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a5d55d76a431489f0e038c31e14cfc1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a5d55d76a431489f0e038c31e14cfc1"></a>
+PFNGLGETVERTEXATTRIBIVPROC&#160;</td><td class="memItemRight" valign="bottom"><b>glGetVertexAttribiv</b></td></tr>
+<tr class="separator:a3a5d55d76a431489f0e038c31e14cfc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e6123b8a623704b3426908209a74c4e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e6123b8a623704b3426908209a74c4e"></a>
+PFNGLENABLEVERTEXATTRIBARRAYARBPROC&#160;</td><td class="memItemRight" valign="bottom"><b>glEnableVertexAttribArray</b></td></tr>
+<tr class="separator:a2e6123b8a623704b3426908209a74c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20d717b19254cb673b9e711e2629de32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20d717b19254cb673b9e711e2629de32"></a>
+PFNGLDISABLEVERTEXATTRIBARRAYARBPROC&#160;</td><td class="memItemRight" valign="bottom"><b>glDisableVertexAttribArray</b></td></tr>
+<tr class="separator:a20d717b19254cb673b9e711e2629de32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ecb2245f90bf326bf2c0d27b766f93a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ecb2245f90bf326bf2c0d27b766f93a"></a>
+PFNGLBLENDEQUATIONPROC&#160;</td><td class="memItemRight" valign="bottom"><b>glBlendEquation</b></td></tr>
+<tr class="separator:a0ecb2245f90bf326bf2c0d27b766f93a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5f735977961b5c835d1496978e58b04"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5f735977961b5c835d1496978e58b04"></a>
+PFNGLBINDVERTEXARRAYPROC&#160;</td><td class="memItemRight" valign="bottom"><b>glBindVertexArray</b></td></tr>
+<tr class="separator:ad5f735977961b5c835d1496978e58b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Stores and restores the current GPU state. </p>
@@ -145,7 +181,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_open_g_l_state.html">OpenGLState</a></li>
-    <li class="footer">Generated on Sat Mar 1 2014 16:03:36 for NoesisLeadwerksWrapper by
+    <li class="footer">Generated on Thu Apr 3 2014 16:35:59 for NoesisLeadwerksWrapper by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
