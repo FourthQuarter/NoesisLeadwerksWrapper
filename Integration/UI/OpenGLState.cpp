@@ -63,7 +63,11 @@ void OpenGLState::Store()
 	renderStates.dither = glIsEnabled(GL_DITHER);
 	renderStates.sampleAlphaToCoverage = glIsEnabled(GL_SAMPLE_ALPHA_TO_COVERAGE);
 	renderStates.sampleCoverage = glIsEnabled(GL_SAMPLE_COVERAGE);
+
+#ifndef LEADWERKS_3_1
 	renderStates.alphaTest = glIsEnabled(GL_ALPHA_TEST);
+#endif
+
 	renderStates.depthTest = glIsEnabled(GL_DEPTH_TEST);
 	glGetBooleanv(GL_DEPTH_WRITEMASK, &renderStates.depthWrite);
 	glGetIntegerv(GL_DEPTH_FUNC, &renderStates.depthFunc);
@@ -117,35 +121,36 @@ void OpenGLState::Restore()
 	glClearColor(renderStates.clearColors[0], renderStates.clearColors[1],
 				 renderStates.clearColors[2], renderStates.clearColors[3]);
 	glClearDepth(renderStates.clearDepth);
-	glClearStencil(renderStates.clearStencil);
 
+	glClearStencil(renderStates.clearStencil);
 	glColorMask(renderStates.colorWriteMask[0], renderStates.colorWriteMask[1],
 				renderStates.colorWriteMask[2], renderStates.colorWriteMask[3]);
 
 	renderStates.dither ? glEnable(GL_DITHER) : glDisable(GL_DITHER);
 	renderStates.sampleAlphaToCoverage ? glEnable(GL_SAMPLE_ALPHA_TO_COVERAGE) :
 		glDisable(GL_SAMPLE_ALPHA_TO_COVERAGE);
+
 	renderStates.sampleCoverage ? glEnable(GL_SAMPLE_COVERAGE) : glDisable(GL_SAMPLE_COVERAGE);
 
+#ifndef LEADWERKS_3_1
 	renderStates.alphaTest ? glEnable(GL_ALPHA_TEST) : glDisable(GL_ALPHA_TEST);
+#endif
+
 	renderStates.depthTest ? glEnable(GL_DEPTH_TEST) : glDisable(GL_DEPTH_TEST);
+
 	glDepthMask(renderStates.depthWrite);
 	glDepthFunc(renderStates.depthFunc);
-
 	renderStates.stencilTest ? glEnable(GL_STENCIL_TEST) : glDisable(GL_STENCIL_TEST);
 	glStencilOp(renderStates.stencilTestFailOp, renderStates.stencilTestSPDF,
 				renderStates.stencilTestSPDP);
 	glStencilFunc(renderStates.stencilFunc, renderStates.stencilRef, renderStates.stencilMask);
 	glStencilMask(renderStates.stencilWriteMask);
-
 	renderStates.scissorTest ? glEnable(GL_SCISSOR_TEST) : glDisable(GL_SCISSOR_TEST);
 	renderStates.cullFaceEnabled ? glEnable(GL_CULL_FACE) : glDisable(GL_CULL_FACE);
 	glCullFace(renderStates.cullFaceMode);
-
 	renderStates.blendEnabled ? glEnable(GL_BLEND) : glDisable(GL_BLEND);
 	glBlendEquation(renderStates.blendEquation);
 	glBlendFunc(renderStates.blendSource, renderStates.blendDestination);
-
 	for (NsSize i = 0; i < 4; i++)
 	{
 		glActiveTexture(GL_TEXTURE0 + i);
@@ -166,4 +171,6 @@ void OpenGLState::Restore()
 	}
 
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, renderStates.elementArrayBuffer);
+	
+	//printf("GLERR: %d\n", glGetError());
 }
