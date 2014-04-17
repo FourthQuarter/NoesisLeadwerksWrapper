@@ -52,7 +52,6 @@ private:
 	Noesis::Gui::IRenderer*								renderer; ///< Actual renderer
 	Noesis::Gui::FrameworkElement*						xaml; ///< Loaded xaml
 
-
 public:
 	/**
 	 * \brief Creates a new UIRenderer

@@ -1,0 +1,108 @@
+\hypertarget{class_u_i_render_target}{\section{U\-I\-Render\-Target Class Reference}
+\label{class_u_i_render_target}\index{U\-I\-Render\-Target@{U\-I\-Render\-Target}}
+}
+
+
+Render target.  
+
+
+
+
+{\ttfamily \#include $<$U\-I\-Render\-Target.\-h$>$}
+
+
+
+Collaboration diagram for U\-I\-Render\-Target\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{class_u_i_render_target__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_u_i_render_target_a0a92fb5e803c91ca4288b4244ab6af3b}{U\-I\-Render\-Target} (const int width, const int height, const int format=Leadwerks\-::\-Texture\-::\-R\-G\-B\-A, const int flags=0, const int frames=1, const int samples=0)
+\begin{DoxyCompactList}\small\item\em Craetes a new render target. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_render_target_a647cc3a9d76dca037954d2c694dc8499}{void \hyperlink{class_u_i_render_target_a647cc3a9d76dca037954d2c694dc8499}{Begin} ()}\label{class_u_i_render_target_a647cc3a9d76dca037954d2c694dc8499}
+
+\begin{DoxyCompactList}\small\item\em Start rendering into the render target. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_render_target_ab660bf14c0e070939943076825e859cb}{void \hyperlink{class_u_i_render_target_ab660bf14c0e070939943076825e859cb}{End} ()}\label{class_u_i_render_target_ab660bf14c0e070939943076825e859cb}
+
+\begin{DoxyCompactList}\small\item\em Stop rendering into the render target. \end{DoxyCompactList}\item 
+Leadwerks\-::\-Texture $\ast$ \hyperlink{class_u_i_render_target_a6ede8013f6b4c87556c37f086f1a864d}{Get\-Texture} ()
+\begin{DoxyCompactList}\small\item\em Get render target texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_u_i_render_target_a71089abfab0c5ef2e04fc81bbc986ebf}{G\-Luint \hyperlink{class_u_i_render_target_a71089abfab0c5ef2e04fc81bbc986ebf}{fbo}}\label{class_u_i_render_target_a71089abfab0c5ef2e04fc81bbc986ebf}
+
+\begin{DoxyCompactList}\small\item\em Framebuffer. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_render_target_a59c466d2b55a013e36dbff39dda3a38f}{G\-Luint \hyperlink{class_u_i_render_target_a59c466d2b55a013e36dbff39dda3a38f}{depth\-Stencil}}\label{class_u_i_render_target_a59c466d2b55a013e36dbff39dda3a38f}
+
+\begin{DoxyCompactList}\small\item\em Renderbuffer. \end{DoxyCompactList}\item 
+\hypertarget{class_u_i_render_target_ae865daebacafba6e779ab2dec1c04690}{Leadwerks\-::\-Open\-G\-L2\-Texture $\ast$ \hyperlink{class_u_i_render_target_ae865daebacafba6e779ab2dec1c04690}{texture}}\label{class_u_i_render_target_ae865daebacafba6e779ab2dec1c04690}
+
+\begin{DoxyCompactList}\small\item\em Texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Render target. 
+
+Creates a new F\-B\-O with stencil enabled in the current Open\-G\-L context. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_u_i_render_target_a0a92fb5e803c91ca4288b4244ab6af3b}{\index{U\-I\-Render\-Target@{U\-I\-Render\-Target}!U\-I\-Render\-Target@{U\-I\-Render\-Target}}
+\index{U\-I\-Render\-Target@{U\-I\-Render\-Target}!UIRenderTarget@{U\-I\-Render\-Target}}
+\subsubsection[{U\-I\-Render\-Target}]{\setlength{\rightskip}{0pt plus 5cm}U\-I\-Render\-Target\-::\-U\-I\-Render\-Target (
+\begin{DoxyParamCaption}
+\item[{const int}]{width, }
+\item[{const int}]{height, }
+\item[{const int}]{format = {\ttfamily Leadwerks\-:\-:Texture\-:\-:RGBA}, }
+\item[{const int}]{flags = {\ttfamily 0}, }
+\item[{const int}]{frames = {\ttfamily 1}, }
+\item[{const int}]{samples = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_u_i_render_target_a0a92fb5e803c91ca4288b4244ab6af3b}
+
+
+Craetes a new render target. 
+
+Parameter information\-: \href{http://www.leadwerks.com/werkspace/page/documentation/_/command-reference/texture/texturecreate-r340}{\tt http\-://www.\-leadwerks.\-com/werkspace/page/documentation/\-\_\-/command-\/reference/texture/texturecreate-\/r340} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em width} & Texture width \\
+\hline
+\mbox{\tt in}  & {\em height} & Texture height \\
+\hline
+\mbox{\tt in}  & {\em format} & Texture format \\
+\hline
+\mbox{\tt in}  & {\em flags} & Texture flags \\
+\hline
+\mbox{\tt in}  & {\em frames} & Texture frames \\
+\hline
+\mbox{\tt in}  & {\em samples} & Texture samples \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_u_i_render_target_a6ede8013f6b4c87556c37f086f1a864d}{\index{U\-I\-Render\-Target@{U\-I\-Render\-Target}!Get\-Texture@{Get\-Texture}}
+\index{Get\-Texture@{Get\-Texture}!UIRenderTarget@{U\-I\-Render\-Target}}
+\subsubsection[{Get\-Texture}]{\setlength{\rightskip}{0pt plus 5cm}Leadwerks\-::\-Texture $\ast$ U\-I\-Render\-Target\-::\-Get\-Texture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_u_i_render_target_a6ede8013f6b4c87556c37f086f1a864d}
+
+
+Get render target texture. 
+
+\begin{DoxyReturn}{Returns}
+Texture 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Integration/\-U\-I/U\-I\-Render\-Target.\-h\item 
+Integration/\-U\-I/U\-I\-Render\-Target.\-cpp\end{DoxyCompactItemize}

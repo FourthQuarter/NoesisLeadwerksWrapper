@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['removekeyboardlistener',['RemoveKeyboardListener',['../class_u_i_system.html#a01f185ae5eb2dd12607cff3fbaaebad2',1,'UISystem']]],
-  ['removemouselistener',['RemoveMouseListener',['../class_u_i_system.html#a833da0ec7454752a7872d82051366aad',1,'UISystem']]],
-  ['render',['Render',['../class_u_i_renderer.html#a6961b53c2f5bf48d18c5164aaf5785d6',1,'UIRenderer']]],
-  ['rendercommands',['renderCommands',['../_u_i_renderer_8cpp.html#a40fdf53d7b86c19d76e88b34bd319a0f',1,'UIRenderer.cpp']]],
-  ['renderoffscreen',['RenderOffscreen',['../class_u_i_renderer.html#a1299a480654f95b593f1b22117e2324a',1,'UIRenderer']]],
-  ['renderstates',['RenderStates',['../struct_render_states.html',1,'']]],
-  ['renderstates_2eh',['RenderStates.h',['../_render_states_8h.html',1,'']]],
-  ['restore',['Restore',['../class_open_g_l_state.html#a08189bfef75f3408539b1e570d14d838',1,'OpenGLState']]]
+  ['setantialiasingmode',['SetAntialiasingMode',['../class_u_i_renderer.html#a05d5fed9d98c02a150efeb8e6ea36812',1,'UIRenderer']]],
+  ['setoffscreensize',['SetOffscreenSize',['../class_u_i_renderer.html#ad8eacb018b912e5d7786ca6f1642b4ce',1,'UIRenderer']]],
+  ['setsize',['SetSize',['../class_u_i_renderer.html#a9afd9d07f2c93d426f55ce2e84a64cef',1,'UIRenderer']]],
+  ['settessellationmode',['SetTessellationMode',['../class_u_i_renderer.html#a54d4d9236175ecca2568dffa8f6a60e6',1,'UIRenderer']]],
+  ['settessellationquality',['SetTessellationQuality',['../class_u_i_renderer.html#a77ab17ad59e589eb32d55699ea1ab1c6',1,'UIRenderer']]],
+  ['store',['Store',['../class_open_g_l_state.html#a8078b65f6b29b681960ba03b6d35160e',1,'OpenGLState']]]
 ];

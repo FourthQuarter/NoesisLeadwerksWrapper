@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>NoesisLeadwerksWrapper: Integration/UI/OpenGLState.h Source File</title>
+<title>NoesisLeadwerksWrapper: Integration/UI/UIRenderTarget.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -83,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('_open_g_l_state_8h_source.html','');});
+$(document).ready(function(){initNavTree('_u_i_render_target_8h_source.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -102,13 +102,13 @@ $(document).ready(function(){initNavTree('_open_g_l_state_8h_source.html','');})
 
 <div class="header">
   <div class="headertitle">
-<div class="title">OpenGLState.h</div>  </div>
+<div class="title">UIRenderTarget.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************************</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">*   The MIT License(MIT)</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">*</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*   Copyright © 2014, Noesis Technologies S.L. and Bryan Andrew King</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*   Copyright © 2014, Bryan Andrew King</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">*   All rights reserved.</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">*  Permission is hereby granted, free of charge, to any person obtaining a copy</span></div>
@@ -129,48 +129,44 @@ $(document).ready(function(){initNavTree('_open_g_l_state_8h_source.html','');})
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">*   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">*   SOFTWARE.</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">**********************************************************************************/</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef OPENGL_STATE_H</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define OPENGL_STATE_H</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef UI_RENDERTARGET_H</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define UI_RENDERTARGET_H</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;RenderStates.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;Leadwerks.h&gt;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;Leadwerks.h&gt;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;GL\GL.h&gt;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;GL\glew.h&gt;</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_open_g_l_state.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_open_g_l_state.html">OpenGLState</a></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="struct_render_states.html">RenderStates</a>                            renderStates;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    PFNGLBINDFRAMEBUFFERPROC                glBindFramebuffer;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    PFNGLBINDBUFFERPROC                     glBindBuffer;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    PFNGLACTIVETEXTUREPROC                  glActiveTexture;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    PFNGLUSEPROGRAMPROC                     glUseProgram;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    PFNGLGETVERTEXATTRIBIVPROC              glGetVertexAttribiv;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    PFNGLENABLEVERTEXATTRIBARRAYARBPROC     glEnableVertexAttribArray;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    PFNGLDISABLEVERTEXATTRIBARRAYARBPROC    glDisableVertexAttribArray;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    PFNGLBLENDEQUATIONPROC                  glBlendEquation;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    PFNGLBINDVERTEXARRAYPROC                glBindVertexArray;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="class_open_g_l_state.html">OpenGLState</a>();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_open_g_l_state.html#a8078b65f6b29b681960ba03b6d35160e">Store</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_open_g_l_state.html#a08189bfef75f3408539b1e570d14d838">Restore</a>();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif//OPENGL_STATE_H</span></div>
-<div class="ttc" id="class_open_g_l_state_html_a08189bfef75f3408539b1e570d14d838"><div class="ttname"><a href="class_open_g_l_state.html#a08189bfef75f3408539b1e570d14d838">OpenGLState::Restore</a></div><div class="ttdeci">void Restore()</div><div class="ttdoc">Restores the stored gpu state. </div><div class="ttdef"><b>Definition:</b> OpenGLState.cpp:115</div></div>
-<div class="ttc" id="class_open_g_l_state_html"><div class="ttname"><a href="class_open_g_l_state.html">OpenGLState</a></div><div class="ttdoc">Stores and restores the current GPU state. </div><div class="ttdef"><b>Definition:</b> OpenGLState.h:39</div></div>
-<div class="ttc" id="struct_render_states_html"><div class="ttname"><a href="struct_render_states.html">RenderStates</a></div><div class="ttdef"><b>Definition:</b> RenderStates.h:28</div></div>
-<div class="ttc" id="class_open_g_l_state_html_a8078b65f6b29b681960ba03b6d35160e"><div class="ttname"><a href="class_open_g_l_state.html#a8078b65f6b29b681960ba03b6d35160e">OpenGLState::Store</a></div><div class="ttdeci">void Store()</div><div class="ttdoc">Stores the current gpu state. </div><div class="ttdef"><b>Definition:</b> OpenGLState.cpp:52</div></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_u_i_render_target.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_u_i_render_target.html">UIRenderTarget</a></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_u_i_render_target.html#a71089abfab0c5ef2e04fc81bbc986ebf">   38</a></span>&#160;    GLuint                      <a class="code" href="class_u_i_render_target.html#a71089abfab0c5ef2e04fc81bbc986ebf">fbo</a>; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_u_i_render_target.html#a59c466d2b55a013e36dbff39dda3a38f">   39</a></span>&#160;    GLuint                      <a class="code" href="class_u_i_render_target.html#a59c466d2b55a013e36dbff39dda3a38f">depthStencil</a>; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_u_i_render_target.html#ae865daebacafba6e779ab2dec1c04690">   40</a></span>&#160;    Leadwerks::OpenGL2Texture*  <a class="code" href="class_u_i_render_target.html#ae865daebacafba6e779ab2dec1c04690">texture</a>; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="class_u_i_render_target.html#a0a92fb5e803c91ca4288b4244ab6af3b">UIRenderTarget</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height, <span class="keyword">const</span> <span class="keywordtype">int</span> format = Leadwerks::Texture::RGBA, <span class="keyword">const</span> <span class="keywordtype">int</span> flags = 0, <span class="keyword">const</span> <span class="keywordtype">int</span> frames = 1, <span class="keyword">const</span> <span class="keywordtype">int</span> samples = 0);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    ~<a class="code" href="class_u_i_render_target.html">UIRenderTarget</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span>                <a class="code" href="class_u_i_render_target.html#a647cc3a9d76dca037954d2c694dc8499">Begin</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span>                <a class="code" href="class_u_i_render_target.html#ab660bf14c0e070939943076825e859cb">End</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    Leadwerks::Texture* <a class="code" href="class_u_i_render_target.html#a6ede8013f6b4c87556c37f086f1a864d">GetTexture</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif//UI_RENDERTARGET_H</span></div>
+<div class="ttc" id="class_u_i_render_target_html_a71089abfab0c5ef2e04fc81bbc986ebf"><div class="ttname"><a href="class_u_i_render_target.html#a71089abfab0c5ef2e04fc81bbc986ebf">UIRenderTarget::fbo</a></div><div class="ttdeci">GLuint fbo</div><div class="ttdoc">Framebuffer. </div><div class="ttdef"><b>Definition:</b> UIRenderTarget.h:38</div></div>
+<div class="ttc" id="class_u_i_render_target_html_a647cc3a9d76dca037954d2c694dc8499"><div class="ttname"><a href="class_u_i_render_target.html#a647cc3a9d76dca037954d2c694dc8499">UIRenderTarget::Begin</a></div><div class="ttdeci">void Begin()</div><div class="ttdoc">Start rendering into the render target. </div><div class="ttdef"><b>Definition:</b> UIRenderTarget.cpp:97</div></div>
+<div class="ttc" id="class_u_i_render_target_html_a0a92fb5e803c91ca4288b4244ab6af3b"><div class="ttname"><a href="class_u_i_render_target.html#a0a92fb5e803c91ca4288b4244ab6af3b">UIRenderTarget::UIRenderTarget</a></div><div class="ttdeci">UIRenderTarget(const int width, const int height, const int format=Leadwerks::Texture::RGBA, const int flags=0, const int frames=1, const int samples=0)</div><div class="ttdoc">Craetes a new render target. </div><div class="ttdef"><b>Definition:</b> UIRenderTarget.cpp:64</div></div>
+<div class="ttc" id="class_u_i_render_target_html_ae865daebacafba6e779ab2dec1c04690"><div class="ttname"><a href="class_u_i_render_target.html#ae865daebacafba6e779ab2dec1c04690">UIRenderTarget::texture</a></div><div class="ttdeci">Leadwerks::OpenGL2Texture * texture</div><div class="ttdoc">Texture. </div><div class="ttdef"><b>Definition:</b> UIRenderTarget.h:40</div></div>
+<div class="ttc" id="class_u_i_render_target_html_a6ede8013f6b4c87556c37f086f1a864d"><div class="ttname"><a href="class_u_i_render_target.html#a6ede8013f6b4c87556c37f086f1a864d">UIRenderTarget::GetTexture</a></div><div class="ttdeci">Leadwerks::Texture * GetTexture()</div><div class="ttdoc">Get render target texture. </div><div class="ttdef"><b>Definition:</b> UIRenderTarget.cpp:107</div></div>
+<div class="ttc" id="class_u_i_render_target_html_a59c466d2b55a013e36dbff39dda3a38f"><div class="ttname"><a href="class_u_i_render_target.html#a59c466d2b55a013e36dbff39dda3a38f">UIRenderTarget::depthStencil</a></div><div class="ttdeci">GLuint depthStencil</div><div class="ttdoc">Renderbuffer. </div><div class="ttdef"><b>Definition:</b> UIRenderTarget.h:39</div></div>
+<div class="ttc" id="class_u_i_render_target_html"><div class="ttname"><a href="class_u_i_render_target.html">UIRenderTarget</a></div><div class="ttdoc">Render target. </div><div class="ttdef"><b>Definition:</b> UIRenderTarget.h:35</div></div>
+<div class="ttc" id="class_u_i_render_target_html_ab660bf14c0e070939943076825e859cb"><div class="ttname"><a href="class_u_i_render_target.html#ab660bf14c0e070939943076825e859cb">UIRenderTarget::End</a></div><div class="ttdeci">void End()</div><div class="ttdoc">Stop rendering into the render target. </div><div class="ttdef"><b>Definition:</b> UIRenderTarget.cpp:102</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_eecb7863cc5539e333a9a51474f7e532.html">Integration</a></li><li class="navelem"><a class="el" href="dir_6fe0489f0f38986360ceb0efd22938da.html">UI</a></li><li class="navelem"><b>OpenGLState.h</b></li>
+    <li class="navelem"><a class="el" href="dir_eecb7863cc5539e333a9a51474f7e532.html">Integration</a></li><li class="navelem"><a class="el" href="dir_6fe0489f0f38986360ceb0efd22938da.html">UI</a></li><li class="navelem"><b>UIRenderTarget.h</b></li>
     <li class="footer">Generated on Thu Apr 17 2014 20:23:26 for NoesisLeadwerksWrapper by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>

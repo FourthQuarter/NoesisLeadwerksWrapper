@@ -25,6 +25,7 @@
 #include "OpenGLState.h"
 
 #include <Noesis.h>
+#include <Leadwerks.h>
 
 OpenGLState::OpenGLState()
 {
@@ -113,7 +114,10 @@ void OpenGLState::Store()
 
 void OpenGLState::Restore()
 {
+	//printf("--START--\n");
+	//printf("GLERR: %d\n", glGetError());
 	glPixelStorei(GL_UNPACK_ALIGNMENT, renderStates.unpackAlignment);
+	
 	glBindFramebuffer(GL_FRAMEBUFFER, renderStates.frameBuffer);
 	glViewport(renderStates.viewport[0], renderStates.viewport[1], renderStates.viewport[2],
 			   renderStates.viewport[3]);
@@ -161,7 +165,6 @@ void OpenGLState::Restore()
 
 	glUseProgram(renderStates.currentProgram);
 
-
 	glBindVertexArray(renderStates.vertexArrayBuffer);
 	glBindBuffer(GL_ARRAY_BUFFER, renderStates.arrayBuffer);
 	for (NsSize i = 0; i < 6; i++)
@@ -171,6 +174,6 @@ void OpenGLState::Restore()
 	}
 
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, renderStates.elementArrayBuffer);
-	
 	//printf("GLERR: %d\n", glGetError());
+	//printf("--END--\n");
 }

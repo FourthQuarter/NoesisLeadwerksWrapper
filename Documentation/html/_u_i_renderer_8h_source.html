@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">NoesisLeadwerksWrapper
-   &#160;<span id="projectnumber">0.3</span>
+   &#160;<span id="projectnumber">0.4</span>
    </div>
    <div id="projectbrief">NLW</div>
   </td>
@@ -155,45 +155,44 @@ $(document).ready(function(){initNavTree('_u_i_renderer_8h_source.html','');});
 <div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_u_i_renderer.html#a9f78449d8d996e66f1e1d75c3cd6276f">   52</a></span>&#160;    Noesis::Gui::IRenderer*                             <a class="code" href="class_u_i_renderer.html#a9f78449d8d996e66f1e1d75c3cd6276f">renderer</a>; </div>
 <div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_u_i_renderer.html#ad9cc0fe1fcbf5e5182f7a18045c4ec07">   53</a></span>&#160;    Noesis::Gui::FrameworkElement*                      <a class="code" href="class_u_i_renderer.html#ad9cc0fe1fcbf5e5182f7a18045c4ec07">xaml</a>; </div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="class_u_i_renderer.html#a8e0fb11ab4e123f3524756e276199351">UIRenderer</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_u_i_renderer.html">UIRenderer</a>();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a8e61394cd4b9dcf2242f1ec47e95ba5d">Load</a>(std::string <a class="code" href="class_u_i_renderer.html#ad9cc0fe1fcbf5e5182f7a18045c4ec07">xaml</a>, std::string resource = <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a9304bf4f0ff00a671cf45ac5a4198004">Update</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> time);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a305ee68738d0b1b833b73a85ca077261">MousePosition</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> x, <span class="keyword">const</span> <span class="keywordtype">int</span> y);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#aad758939d86e2741ed7330252cfe3b74">MouseButtonDown</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> button);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a9d72b10f66816ecb07c51025130591bf">MouseButtonUp</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> button);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a02a32cecd924b8a855bce495672f8e4e">MouseWheel</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> rotation);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#ac6c071a178d51415329bf4f4f71dfd48">Character</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> character);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#af0f5ee9edad9a7a35b46187d3fb697ea">KeyDown</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> key);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#acf25d6ac3df945fde9054c34bf28edd1">KeyUp</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> key);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a1299a480654f95b593f1b22117e2324a">RenderOffscreen</a>();</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a6961b53c2f5bf48d18c5164aaf5785d6">Render</a>();</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a9afd9d07f2c93d426f55ce2e84a64cef">SetSize</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a05d5fed9d98c02a150efeb8e6ea36812">SetAntialiasingMode</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> mode);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a77ab17ad59e589eb32d55699ea1ab1c6">SetTessellationQuality</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> quality);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a54d4d9236175ecca2568dffa8f6a60e6">SetTessellationMode</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> mode);</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#ad8eacb018b912e5d7786ca6f1642b4ce">SetOffscreenSize</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height, <span class="keyword">const</span> <span class="keywordtype">int</span> multisample);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="class_u_i_renderer.html#a45454e14885545c166a795d4a0884a38">  158</a></span>&#160;    <span class="keyword">inline</span>  <span class="keywordtype">int</span> <a class="code" href="class_u_i_renderer.html#a45454e14885545c166a795d4a0884a38">GetUID</a>(){ <span class="keywordflow">return</span> <a class="code" href="class_u_i_renderer.html#a191e33b40b855c04117de4d49d48e99b">uid</a>; } </div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    Noesis::Gui::FrameworkElement*  <a class="code" href="class_u_i_renderer.html#a0989015bf54f7b6c624829c1fbf284d7">GetXAML</a>();</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;};</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor">#endif//UI_RENDERER_H</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="class_u_i_renderer.html#a8e0fb11ab4e123f3524756e276199351">UIRenderer</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_u_i_renderer.html">UIRenderer</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a8e61394cd4b9dcf2242f1ec47e95ba5d">Load</a>(std::string <a class="code" href="class_u_i_renderer.html#ad9cc0fe1fcbf5e5182f7a18045c4ec07">xaml</a>, std::string resource = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a9304bf4f0ff00a671cf45ac5a4198004">Update</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> time);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a305ee68738d0b1b833b73a85ca077261">MousePosition</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> x, <span class="keyword">const</span> <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#aad758939d86e2741ed7330252cfe3b74">MouseButtonDown</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> button);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a9d72b10f66816ecb07c51025130591bf">MouseButtonUp</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> button);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a02a32cecd924b8a855bce495672f8e4e">MouseWheel</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> rotation);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#ac6c071a178d51415329bf4f4f71dfd48">Character</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> character);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#af0f5ee9edad9a7a35b46187d3fb697ea">KeyDown</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> key);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#acf25d6ac3df945fde9054c34bf28edd1">KeyUp</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> key);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a1299a480654f95b593f1b22117e2324a">RenderOffscreen</a>();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a6961b53c2f5bf48d18c5164aaf5785d6">Render</a>();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a9afd9d07f2c93d426f55ce2e84a64cef">SetSize</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a05d5fed9d98c02a150efeb8e6ea36812">SetAntialiasingMode</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> mode);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a77ab17ad59e589eb32d55699ea1ab1c6">SetTessellationQuality</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> quality);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#a54d4d9236175ecca2568dffa8f6a60e6">SetTessellationMode</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> mode);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_u_i_renderer.html#ad8eacb018b912e5d7786ca6f1642b4ce">SetOffscreenSize</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height, <span class="keyword">const</span> <span class="keywordtype">int</span> multisample);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="class_u_i_renderer.html#a45454e14885545c166a795d4a0884a38">  157</a></span>&#160;    <span class="keyword">inline</span>  <span class="keywordtype">int</span> <a class="code" href="class_u_i_renderer.html#a45454e14885545c166a795d4a0884a38">GetUID</a>(){ <span class="keywordflow">return</span> <a class="code" href="class_u_i_renderer.html#a191e33b40b855c04117de4d49d48e99b">uid</a>; } </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    Noesis::Gui::FrameworkElement*  <a class="code" href="class_u_i_renderer.html#a0989015bf54f7b6c624829c1fbf284d7">GetXAML</a>();</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;};</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">#endif//UI_RENDERER_H</span></div>
 <div class="ttc" id="class_u_i_renderer_html_a191e33b40b855c04117de4d49d48e99b"><div class="ttname"><a href="class_u_i_renderer.html#a191e33b40b855c04117de4d49d48e99b">UIRenderer::uid</a></div><div class="ttdeci">int uid</div><div class="ttdoc">Unique id. </div><div class="ttdef"><b>Definition:</b> UIRenderer.h:49</div></div>
 <div class="ttc" id="class_u_i_renderer_html_af0f5ee9edad9a7a35b46187d3fb697ea"><div class="ttname"><a href="class_u_i_renderer.html#af0f5ee9edad9a7a35b46187d3fb697ea">UIRenderer::KeyDown</a></div><div class="ttdeci">void KeyDown(const int key)</div><div class="ttdoc">Notifies renderer that a key was pressed. </div><div class="ttdef"><b>Definition:</b> UIRenderer.cpp:125</div></div>
 <div class="ttc" id="class_u_i_renderer_html_a1299a480654f95b593f1b22117e2324a"><div class="ttname"><a href="class_u_i_renderer.html#a1299a480654f95b593f1b22117e2324a">UIRenderer::RenderOffscreen</a></div><div class="ttdeci">void RenderOffscreen()</div><div class="ttdoc">Render xaml offscreen. </div><div class="ttdef"><b>Definition:</b> UIRenderer.cpp:167</div></div>
@@ -218,7 +217,7 @@ $(document).ready(function(){initNavTree('_u_i_renderer_8h_source.html','');});
 <div class="ttc" id="class_u_i_renderer_html_a02a32cecd924b8a855bce495672f8e4e"><div class="ttname"><a href="class_u_i_renderer.html#a02a32cecd924b8a855bce495672f8e4e">UIRenderer::MouseWheel</a></div><div class="ttdeci">void MouseWheel(const int rotation)</div><div class="ttdoc">Notifies the renderer that the mouse wheel has been rotated. </div><div class="ttdef"><b>Definition:</b> UIRenderer.cpp:115</div></div>
 <div class="ttc" id="class_u_i_renderer_html_ad8eacb018b912e5d7786ca6f1642b4ce"><div class="ttname"><a href="class_u_i_renderer.html#ad8eacb018b912e5d7786ca6f1642b4ce">UIRenderer::SetOffscreenSize</a></div><div class="ttdeci">void SetOffscreenSize(const int width, const int height, const int multisample)</div><div class="ttdoc">Set offscreen rendering quality. </div><div class="ttdef"><b>Definition:</b> UIRenderer.cpp:196</div></div>
 <div class="ttc" id="class_u_i_renderer_html_a305ee68738d0b1b833b73a85ca077261"><div class="ttname"><a href="class_u_i_renderer.html#a305ee68738d0b1b833b73a85ca077261">UIRenderer::MousePosition</a></div><div class="ttdeci">void MousePosition(const int x, const int y)</div><div class="ttdoc">Notifies the renderer that the mouse position has changed. </div><div class="ttdef"><b>Definition:</b> UIRenderer.cpp:98</div></div>
-<div class="ttc" id="class_u_i_renderer_html_a45454e14885545c166a795d4a0884a38"><div class="ttname"><a href="class_u_i_renderer.html#a45454e14885545c166a795d4a0884a38">UIRenderer::GetUID</a></div><div class="ttdeci">int GetUID()</div><div class="ttdoc">Returns the renderers uid. </div><div class="ttdef"><b>Definition:</b> UIRenderer.h:158</div></div>
+<div class="ttc" id="class_u_i_renderer_html_a45454e14885545c166a795d4a0884a38"><div class="ttname"><a href="class_u_i_renderer.html#a45454e14885545c166a795d4a0884a38">UIRenderer::GetUID</a></div><div class="ttdeci">int GetUID()</div><div class="ttdoc">Returns the renderers uid. </div><div class="ttdef"><b>Definition:</b> UIRenderer.h:157</div></div>
 <div class="ttc" id="class_u_i_renderer_html_a8e61394cd4b9dcf2242f1ec47e95ba5d"><div class="ttname"><a href="class_u_i_renderer.html#a8e61394cd4b9dcf2242f1ec47e95ba5d">UIRenderer::Load</a></div><div class="ttdeci">void Load(std::string xaml, std::string resource=&quot;&quot;)</div><div class="ttdoc">Loads the specified xaml. </div><div class="ttdef"><b>Definition:</b> UIRenderer.cpp:62</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -226,7 +225,7 @@ $(document).ready(function(){initNavTree('_u_i_renderer_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_eecb7863cc5539e333a9a51474f7e532.html">Integration</a></li><li class="navelem"><a class="el" href="dir_6fe0489f0f38986360ceb0efd22938da.html">UI</a></li><li class="navelem"><b>UIRenderer.h</b></li>
-    <li class="footer">Generated on Thu Apr 3 2014 16:35:59 for NoesisLeadwerksWrapper by
+    <li class="footer">Generated on Thu Apr 17 2014 20:23:26 for NoesisLeadwerksWrapper by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

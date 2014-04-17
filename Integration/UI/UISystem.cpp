@@ -50,6 +50,7 @@ void NoesisErrorHandler(const NsChar* filename, NsInt line, const NsChar* desc)
 
 UISystem::UISystem() : currentUID(1)
 {
+
 	Noesis::Core::SetErrorHandler(NoesisErrorHandler);
 
 	// Init kernel
