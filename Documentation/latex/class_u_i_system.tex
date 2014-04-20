@@ -12,7 +12,8 @@ Manages all U\-I related renderers.
 
 
 
-Collaboration diagram for U\-I\-System\-:\nopagebreak
+Collaboration diagram for U\-I\-System\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -44,6 +45,11 @@ void \hyperlink{class_u_i_system_a833da0ec7454752a7872d82051366aad}{Remove\-Mous
 \hypertarget{class_u_i_system_a29ac5727af1a979e24f4e8a92ff7a5a3}{void \hyperlink{class_u_i_system_a29ac5727af1a979e24f4e8a92ff7a5a3}{Capture} ()}\label{class_u_i_system_a29ac5727af1a979e24f4e8a92ff7a5a3}
 
 \begin{DoxyCompactList}\small\item\em Capture Keyboard and mouse input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_u_i_system_ac99ba6fff41b063161c3aaad85e6e1f4}{Enable\-Stencil} ()
+\begin{DoxyCompactList}\small\item\em Enables Leadwerks stencil support. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -81,6 +87,12 @@ int \hyperlink{class_u_i_system_ab10ce968219079f159b53a035e115cee}{Key\-To\-Text
 
 \item 
 \hypertarget{class_u_i_system_aaf09f639ae523ee3d7ba186951518ec8}{double {\bfseries ms\-Wheel\-Pos}}\label{class_u_i_system_aaf09f639ae523ee3d7ba186951518ec8}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_u_i_system_aafd55f203f9f504076c5e6cdcc5d3062}{static bool {\bfseries stencil\-Enabled} = false}\label{class_u_i_system_aafd55f203f9f504076c5e6cdcc5d3062}
 
 \end{DoxyCompactItemize}
 
@@ -157,6 +169,20 @@ Convert Leadwerks mouse-\/key to Noesis compatible key-\/code.
 \begin{DoxyReturn}{Returns}
 Noesis compatible key-\/code 
 \end{DoxyReturn}
+\hypertarget{class_u_i_system_ac99ba6fff41b063161c3aaad85e6e1f4}{\index{U\-I\-System@{U\-I\-System}!Enable\-Stencil@{Enable\-Stencil}}
+\index{Enable\-Stencil@{Enable\-Stencil}!UISystem@{U\-I\-System}}
+\subsubsection[{Enable\-Stencil}]{\setlength{\rightskip}{0pt plus 5cm}void U\-I\-System\-::\-Enable\-Stencil (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_u_i_system_ac99ba6fff41b063161c3aaad85e6e1f4}
+
+
+Enables Leadwerks stencil support. 
+
+\begin{DoxyWarning}{Warning}
+Must be called before context creation! 
+\end{DoxyWarning}
 \hypertarget{class_u_i_system_a5735f001450f7ecd82a4de76558640c6}{\index{U\-I\-System@{U\-I\-System}!Generate\-U\-I\-D@{Generate\-U\-I\-D}}
 \index{Generate\-U\-I\-D@{Generate\-U\-I\-D}!UISystem@{U\-I\-System}}
 \subsubsection[{Generate\-U\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int U\-I\-System\-::\-Generate\-U\-I\-D (

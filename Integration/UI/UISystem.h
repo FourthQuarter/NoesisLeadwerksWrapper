@@ -70,6 +70,7 @@ private:
 	double						curMsWheelPos;
 	double						msWheelPos;
 
+	static bool					stencilEnabled;
 public:
 	/**
 	 * \brief Initializes noesis.
@@ -123,6 +124,12 @@ public:
 	 * \brief Capture Keyboard and mouse input
 	 */
 	void					Capture();
+
+	/**
+	 * \brief Enables Leadwerks stencil support
+	 * \warning Must be called before context creation!
+	 */
+	static void				EnableStencil();
 };
 
 #endif//UI_SYSTEM_H

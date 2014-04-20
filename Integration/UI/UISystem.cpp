@@ -31,6 +31,11 @@
 #include <NsCore\NsConfig.h>
 #include <NsGui\InputEnums.h>
 
+// Leadwerks
+#include <Leadwerks.h>
+
+bool UISystem::stencilEnabled = false;
+
 void NoesisErrorHandler(const NsChar* filename, NsInt line, const NsChar* desc)
 {
 	// Print error to console
@@ -50,6 +55,22 @@ void NoesisErrorHandler(const NsChar* filename, NsInt line, const NsChar* desc)
 
 UISystem::UISystem() : currentUID(1)
 {
+	// Check for stencil
+	if (!stencilEnabled)
+	{
+		if (Leadwerks::OpenGLStencilBits != 8)
+		{
+			// Stencil is not enabled
+			printf("\nUISystem Warning: Stencil is not enabled.\n\n");
+
+			// Perhaps we could try enabling it
+			EnableStencil();
+		}
+		else
+		{
+			stencilEnabled = true;
+		}
+	}
 
 	Noesis::Core::SetErrorHandler(NoesisErrorHandler);
 
@@ -388,4 +409,9 @@ void UISystem::Capture()
 {
 	CaptureKeyboard();
 	CaptureMouse();
+}
+
+void UISystem::EnableStencil()
+{
+	Leadwerks::OpenGLStencilBits = 8;
 }

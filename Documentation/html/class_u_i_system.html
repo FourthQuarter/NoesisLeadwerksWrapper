@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">NoesisLeadwerksWrapper
-   &#160;<span id="projectnumber">0.4</span>
+   &#160;<span id="projectnumber">0.41</span>
    </div>
    <div id="projectbrief">NLW</div>
   </td>
@@ -105,8 +105,10 @@ $(document).ready(function(){initNavTree('class_u_i_system.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_u_i_system-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UISystem Class Reference</div>  </div>
@@ -121,6 +123,8 @@ $(document).ready(function(){initNavTree('class_u_i_system.html','');});
 Collaboration diagram for UISystem:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_u_i_system__coll__graph.png" border="0" usemap="#_u_i_system_coll__map" alt="Collaboration graph"/></div>
+<map name="_u_i_system_coll__map" id="_u_i_system_coll__map">
+</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -156,6 +160,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_system.html#a29ac5727af1a979e24f4e8a92ff7a5a3">Capture</a> ()</td></tr>
 <tr class="memdesc:a29ac5727af1a979e24f4e8a92ff7a5a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Capture Keyboard and mouse input. <br/></td></tr>
 <tr class="separator:a29ac5727af1a979e24f4e8a92ff7a5a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ac99ba6fff41b063161c3aaad85e6e1f4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_system.html#ac99ba6fff41b063161c3aaad85e6e1f4">EnableStencil</a> ()</td></tr>
+<tr class="memdesc:ac99ba6fff41b063161c3aaad85e6e1f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables Leadwerks stencil support.  <a href="#ac99ba6fff41b063161c3aaad85e6e1f4">More...</a><br/></td></tr>
+<tr class="separator:ac99ba6fff41b063161c3aaad85e6e1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -204,6 +214,12 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>curMsWheelPos</b></
 <tr class="memitem:aaf09f639ae523ee3d7ba186951518ec8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf09f639ae523ee3d7ba186951518ec8"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>msWheelPos</b></td></tr>
 <tr class="separator:aaf09f639ae523ee3d7ba186951518ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:aafd55f203f9f504076c5e6cdcc5d3062"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafd55f203f9f504076c5e6cdcc5d3062"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>stencilEnabled</b> = false</td></tr>
+<tr class="separator:aafd55f203f9f504076c5e6cdcc5d3062"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages all UI related renderers. </p>
@@ -313,6 +329,32 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>msWheelPos</b></td>
 
 </div>
 </div>
+<a class="anchor" id="ac99ba6fff41b063161c3aaad85e6e1f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UISystem::EnableStencil </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enables Leadwerks stencil support. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Must be called before context creation! </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a5735f001450f7ecd82a4de76558640c6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -416,7 +458,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>msWheelPos</b></td>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_u_i_system.html">UISystem</a></li>
-    <li class="footer">Generated on Thu Apr 17 2014 20:23:26 for NoesisLeadwerksWrapper by
+    <li class="footer">Generated on Sun Apr 20 2014 20:13:11 for NoesisLeadwerksWrapper by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
