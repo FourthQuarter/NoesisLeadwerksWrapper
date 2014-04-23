@@ -69,7 +69,7 @@ public:
 	/**
 	 * \brief Update Renderer
 	 * \details Updates the noesis kernel, the renderer and the renderCommands.
-	 * \param[in] time Time in ms
+	 * \param[in] time Time in s
 	 */
 	void	Update(const double time);
 

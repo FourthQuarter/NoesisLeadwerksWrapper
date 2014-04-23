@@ -26,8 +26,6 @@ Collaboration diagram for U\-I\-System\-:
 \hypertarget{class_u_i_system_ac930744c42c305f09deacd176045392b}{\hyperlink{class_u_i_system_ac930744c42c305f09deacd176045392b}{U\-I\-System} ()}\label{class_u_i_system_ac930744c42c305f09deacd176045392b}
 
 \begin{DoxyCompactList}\small\item\em Initializes noesis. \end{DoxyCompactList}\item 
-int \hyperlink{class_u_i_system_a5735f001450f7ecd82a4de76558640c6}{Generate\-U\-I\-D} ()
-\begin{DoxyCompactList}\small\item\em Generates a new unique id. \end{DoxyCompactList}\item 
 void \hyperlink{class_u_i_system_a45a982a524c4d35a383232984062e21f}{Add\-Keyboard\-Listener} (\hyperlink{class_u_i_renderer}{U\-I\-Renderer} $\ast$\&ui\-Renderer)
 \begin{DoxyCompactList}\small\item\em Registers a listener for keyboard input events. \end{DoxyCompactList}\item 
 void \hyperlink{class_u_i_system_a51a64e1ed2767a9f57c52195468ea3bf}{Add\-Mouse\-Listener} (\hyperlink{class_u_i_renderer}{U\-I\-Renderer} $\ast$\&ui\-Renderer)
@@ -48,6 +46,8 @@ void \hyperlink{class_u_i_system_a833da0ec7454752a7872d82051366aad}{Remove\-Mous
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+static int \hyperlink{class_u_i_system_a5735f001450f7ecd82a4de76558640c6}{Generate\-U\-I\-D} ()
+\begin{DoxyCompactList}\small\item\em Generates a new unique id. \end{DoxyCompactList}\item 
 static void \hyperlink{class_u_i_system_ac99ba6fff41b063161c3aaad85e6e1f4}{Enable\-Stencil} ()
 \begin{DoxyCompactList}\small\item\em Enables Leadwerks stencil support. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
@@ -68,10 +68,7 @@ int \hyperlink{class_u_i_system_ab10ce968219079f159b53a035e115cee}{Key\-To\-Text
 \hypertarget{class_u_i_system_ae62a4dc19872c94de26957ccccec9112}{std\-::vector$<$ \hyperlink{class_u_i_renderer}{U\-I\-Renderer} $\ast$ $>$ \hyperlink{class_u_i_system_ae62a4dc19872c94de26957ccccec9112}{kb\-Listener}}\label{class_u_i_system_ae62a4dc19872c94de26957ccccec9112}
 
 \begin{DoxyCompactList}\small\item\em Keyboard listeners. \end{DoxyCompactList}\item 
-\hypertarget{class_u_i_system_afa67c850ac0fcebe6d5ce507c2b8fb0b}{int \hyperlink{class_u_i_system_afa67c850ac0fcebe6d5ce507c2b8fb0b}{current\-U\-I\-D}}\label{class_u_i_system_afa67c850ac0fcebe6d5ce507c2b8fb0b}
-
-\begin{DoxyCompactList}\small\item\em Current unique id. \end{DoxyCompactList}\item 
-\hypertarget{class_u_i_system_a56a33b6591efa7ee02df81c02c64e7d5}{char \hyperlink{class_u_i_system_a56a33b6591efa7ee02df81c02c64e7d5}{dead\-Key}}\label{class_u_i_system_a56a33b6591efa7ee02df81c02c64e7d5}
+\hypertarget{class_u_i_system_aca722df34819c38b0a7ccc75b88eeb3f}{unsigned char \hyperlink{class_u_i_system_aca722df34819c38b0a7ccc75b88eeb3f}{dead\-Key}}\label{class_u_i_system_aca722df34819c38b0a7ccc75b88eeb3f}
 
 \begin{DoxyCompactList}\small\item\em Last found deadkey. \end{DoxyCompactList}\item 
 \hypertarget{class_u_i_system_a4b44c8ec919f89201bd36f4652f28751}{bool \hyperlink{class_u_i_system_a4b44c8ec919f89201bd36f4652f28751}{msbuttondown} \mbox{[}5\mbox{]}}\label{class_u_i_system_a4b44c8ec919f89201bd36f4652f28751}
@@ -92,6 +89,9 @@ int \hyperlink{class_u_i_system_ab10ce968219079f159b53a035e115cee}{Key\-To\-Text
 \subsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
+\hypertarget{class_u_i_system_afa67c850ac0fcebe6d5ce507c2b8fb0b}{static int \hyperlink{class_u_i_system_afa67c850ac0fcebe6d5ce507c2b8fb0b}{current\-U\-I\-D} = 1}\label{class_u_i_system_afa67c850ac0fcebe6d5ce507c2b8fb0b}
+
+\begin{DoxyCompactList}\small\item\em Current unique id. \end{DoxyCompactList}\item 
 \hypertarget{class_u_i_system_aafd55f203f9f504076c5e6cdcc5d3062}{static bool {\bfseries stencil\-Enabled} = false}\label{class_u_i_system_aafd55f203f9f504076c5e6cdcc5d3062}
 
 \end{DoxyCompactItemize}
@@ -189,7 +189,7 @@ Must be called before context creation!
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_u_i_system_a5735f001450f7ecd82a4de76558640c6}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_u_i_system_a5735f001450f7ecd82a4de76558640c6}
 
 
 Generates a new unique id. 

@@ -39,10 +39,10 @@ class UISystem
 private:
 	std::vector<UIRenderer*>	msListener;	///< Mouse listeners
 	std::vector<UIRenderer*>	kbListener; ///< Keyboard listeners
-	int							currentUID; ///< Current unique id
+	static int					currentUID; ///< Current unique id
 	
 	// Keyboard input
-	char						deadKey; ///< Last found deadkey
+	unsigned char				deadKey; ///< Last found deadkey
 	
 	/**
 	 * \brief Convert Leadwerks V-Key to Noesis compatible key-code
@@ -82,7 +82,7 @@ public:
 	 * \brief Generates a new unique id
 	 * \return id
 	 */
-	int						GenerateUID();
+	static int					GenerateUID();
 
 	/**
 	 * \brief Registers a listener for keyboard input events

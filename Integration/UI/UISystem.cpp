@@ -34,6 +34,7 @@
 // Leadwerks
 #include <Leadwerks.h>
 
+int	 UISystem::currentUID	  = 1;
 bool UISystem::stencilEnabled = false;
 
 void NoesisErrorHandler(const NsChar* filename, NsInt line, const NsChar* desc)
@@ -53,7 +54,7 @@ void NoesisErrorHandler(const NsChar* filename, NsInt line, const NsChar* desc)
 	exit(EXIT_FAILURE);
 }
 
-UISystem::UISystem() : currentUID(1)
+UISystem::UISystem()
 {
 	// Check for stencil
 	if (!stencilEnabled)
@@ -321,15 +322,15 @@ int UISystem::KeyToText(const int vkey)
 		// http://www.fileformat.info/info/unicode/block/combining_diacritical_marks/images.htm
 		switch (buff[0])	{
 			case 0x5E: // Circumflex accent: â
-				deadKey = 0x302; break;
+				deadKey = (unsigned char)0x302; break;
 			case 0x60: // Grave accent: à
-				deadKey = 0x300; break;
+				deadKey = (unsigned char)0x300; break;
 			case 0xA8: // Diaeresis: ü
-				deadKey = 0x308; break;
+				deadKey = (unsigned char)0x308; break;
 			case 0xB4: // Acute accent: é
-				deadKey = 0x301; break;
+				deadKey = (unsigned char)0x301; break;
 			case 0xB8: // Cedilla: ç
-				deadKey = 0x327; break;
+				deadKey = (unsigned char)0x327; break;
 			default:
 				deadKey = buff[0]; break;
 		}

@@ -36,10 +36,14 @@ Once you have all necessary files added to your project start by adding the incl
 	#include <UI\UIRenderer.h>
 
     
-Define objects for the ui system and renderer:
+Define objects for the ui system and xaml renderer:
 
 	UISystem*		uiSystem;
 	UIRenderer*		uiRenderer;
+
+Noesis needs to have stencil enabled in order to work proper. Add this before your context creation:
+
+	UISystem::EnableStencil();
 
 Initialize both objects inside the *App::Start* method:
 
@@ -74,4 +78,4 @@ That's all! You should now see a tux:
 
 ![TUX](http://i.imgur.com/rdF5RCz.jpg)
 
-For more examples check the *Examples* folder.
+For more examples take a look at the *Examples* folder.

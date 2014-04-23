@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">NoesisLeadwerksWrapper
-   &#160;<span id="projectnumber">0.41</span>
+   &#160;<span id="projectnumber">0.42</span>
    </div>
    <div id="projectbrief">NLW</div>
   </td>
@@ -133,9 +133,6 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_system.html#ac930744c42c305f09deacd176045392b">UISystem</a> ()</td></tr>
 <tr class="memdesc:ac930744c42c305f09deacd176045392b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes noesis. <br/></td></tr>
 <tr class="separator:ac930744c42c305f09deacd176045392b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5735f001450f7ecd82a4de76558640c6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_system.html#a5735f001450f7ecd82a4de76558640c6">GenerateUID</a> ()</td></tr>
-<tr class="memdesc:a5735f001450f7ecd82a4de76558640c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a new unique id.  <a href="#a5735f001450f7ecd82a4de76558640c6">More...</a><br/></td></tr>
-<tr class="separator:a5735f001450f7ecd82a4de76558640c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45a982a524c4d35a383232984062e21f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_system.html#a45a982a524c4d35a383232984062e21f">AddKeyboardListener</a> (<a class="el" href="class_u_i_renderer.html">UIRenderer</a> *&amp;uiRenderer)</td></tr>
 <tr class="memdesc:a45a982a524c4d35a383232984062e21f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a listener for keyboard input events.  <a href="#a45a982a524c4d35a383232984062e21f">More...</a><br/></td></tr>
 <tr class="separator:a45a982a524c4d35a383232984062e21f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,6 +160,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a5735f001450f7ecd82a4de76558640c6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_system.html#a5735f001450f7ecd82a4de76558640c6">GenerateUID</a> ()</td></tr>
+<tr class="memdesc:a5735f001450f7ecd82a4de76558640c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a new unique id.  <a href="#a5735f001450f7ecd82a4de76558640c6">More...</a><br/></td></tr>
+<tr class="separator:a5735f001450f7ecd82a4de76558640c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac99ba6fff41b063161c3aaad85e6e1f4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_system.html#ac99ba6fff41b063161c3aaad85e6e1f4">EnableStencil</a> ()</td></tr>
 <tr class="memdesc:ac99ba6fff41b063161c3aaad85e6e1f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables Leadwerks stencil support.  <a href="#ac99ba6fff41b063161c3aaad85e6e1f4">More...</a><br/></td></tr>
 <tr class="separator:ac99ba6fff41b063161c3aaad85e6e1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,14 +189,10 @@ std::vector&lt; <a class="el" href="class_u_i_renderer.html">UIRenderer</a> * &g
 std::vector&lt; <a class="el" href="class_u_i_renderer.html">UIRenderer</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_system.html#ae62a4dc19872c94de26957ccccec9112">kbListener</a></td></tr>
 <tr class="memdesc:ae62a4dc19872c94de26957ccccec9112"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyboard listeners. <br/></td></tr>
 <tr class="separator:ae62a4dc19872c94de26957ccccec9112"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa67c850ac0fcebe6d5ce507c2b8fb0b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa67c850ac0fcebe6d5ce507c2b8fb0b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_system.html#afa67c850ac0fcebe6d5ce507c2b8fb0b">currentUID</a></td></tr>
-<tr class="memdesc:afa67c850ac0fcebe6d5ce507c2b8fb0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current unique id. <br/></td></tr>
-<tr class="separator:afa67c850ac0fcebe6d5ce507c2b8fb0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56a33b6591efa7ee02df81c02c64e7d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56a33b6591efa7ee02df81c02c64e7d5"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_system.html#a56a33b6591efa7ee02df81c02c64e7d5">deadKey</a></td></tr>
-<tr class="memdesc:a56a33b6591efa7ee02df81c02c64e7d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last found deadkey. <br/></td></tr>
-<tr class="separator:a56a33b6591efa7ee02df81c02c64e7d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca722df34819c38b0a7ccc75b88eeb3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca722df34819c38b0a7ccc75b88eeb3f"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_system.html#aca722df34819c38b0a7ccc75b88eeb3f">deadKey</a></td></tr>
+<tr class="memdesc:aca722df34819c38b0a7ccc75b88eeb3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last found deadkey. <br/></td></tr>
+<tr class="separator:aca722df34819c38b0a7ccc75b88eeb3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b44c8ec919f89201bd36f4652f28751"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b44c8ec919f89201bd36f4652f28751"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_system.html#a4b44c8ec919f89201bd36f4652f28751">msbuttondown</a> [5]</td></tr>
 <tr class="memdesc:a4b44c8ec919f89201bd36f4652f28751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keydown state for all mouse buttons. <br/></td></tr>
@@ -217,6 +213,10 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>msWheelPos</b></td>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
+<tr class="memitem:afa67c850ac0fcebe6d5ce507c2b8fb0b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa67c850ac0fcebe6d5ce507c2b8fb0b"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_system.html#afa67c850ac0fcebe6d5ce507c2b8fb0b">currentUID</a> = 1</td></tr>
+<tr class="memdesc:afa67c850ac0fcebe6d5ce507c2b8fb0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current unique id. <br/></td></tr>
+<tr class="separator:afa67c850ac0fcebe6d5ce507c2b8fb0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafd55f203f9f504076c5e6cdcc5d3062"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafd55f203f9f504076c5e6cdcc5d3062"></a>
 static bool&#160;</td><td class="memItemRight" valign="bottom"><b>stencilEnabled</b> = false</td></tr>
 <tr class="separator:aafd55f203f9f504076c5e6cdcc5d3062"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -358,6 +358,9 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>stencilEnabled
 <a class="anchor" id="a5735f001450f7ecd82a4de76558640c6"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int UISystem::GenerateUID </td>
@@ -366,6 +369,11 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>stencilEnabled
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Generates a new unique id. </p>
@@ -458,7 +466,7 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>stencilEnabled
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_u_i_system.html">UISystem</a></li>
-    <li class="footer">Generated on Sun Apr 20 2014 20:13:11 for NoesisLeadwerksWrapper by
+    <li class="footer">Generated on Thu Apr 24 2014 00:55:08 for NoesisLeadwerksWrapper by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
