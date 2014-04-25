@@ -39,6 +39,11 @@ using namespace Noesis;
 using namespace Noesis::Gui;
 using namespace Noesis::Core;
 
+const int UIRenderer::Wireframe		= 1;
+const int UIRenderer::ColorBatch	= 2;
+const int UIRenderer::Overdraw		= 4;
+const int UIRenderer::FlipY			= 8;
+
 RenderCommands renderCommands;
 
 UIRenderer::UIRenderer(const int uid) : uid(-1), renderer(NULL), xaml(NULL), glState(NULL)
@@ -206,4 +211,9 @@ void UIRenderer::SetSize(const int width, const int height)
 Noesis::Gui::FrameworkElement*	UIRenderer::GetXAML()
 {
 	return this->xaml;
+}
+
+void UIRenderer::SetFlags(const int flags)
+{
+	renderer->SetFlags(flags);
 }

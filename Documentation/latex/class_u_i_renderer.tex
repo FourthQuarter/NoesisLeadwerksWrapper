@@ -12,7 +12,8 @@ X\-A\-M\-L Renderer.
 
 
 
-Collaboration diagram for U\-I\-Renderer\-:\nopagebreak
+Collaboration diagram for U\-I\-Renderer\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -70,7 +71,24 @@ void \hyperlink{class_u_i_renderer_ad8eacb018b912e5d7786ca6f1642b4ce}{Set\-Offsc
 int \hyperlink{class_u_i_renderer_a45454e14885545c166a795d4a0884a38}{Get\-U\-I\-D} ()
 \begin{DoxyCompactList}\small\item\em Returns the renderers uid. \end{DoxyCompactList}\item 
 Noesis\-::\-Gui\-::\-Framework\-Element $\ast$ \hyperlink{class_u_i_renderer_a0989015bf54f7b6c624829c1fbf284d7}{Get\-X\-A\-M\-L} ()
-\begin{DoxyCompactList}\small\item\em Returns the loaded X\-A\-M\-L. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns the loaded X\-A\-M\-L. \end{DoxyCompactList}\item 
+void \hyperlink{class_u_i_renderer_af9dca433a7bba7349412539760e9a6d6}{Set\-Flags} (const int flags)
+\begin{DoxyCompactList}\small\item\em Sets renderer flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_u_i_renderer_a6472e56938d0e576e6e49f55f53355d1}{static const int {\bfseries Wireframe} = 1}\label{class_u_i_renderer_a6472e56938d0e576e6e49f55f53355d1}
+
+\item 
+\hypertarget{class_u_i_renderer_a1936b4d333e8b4dcbfc8ae7842d7831b}{static const int {\bfseries Color\-Batch} = 2}\label{class_u_i_renderer_a1936b4d333e8b4dcbfc8ae7842d7831b}
+
+\item 
+\hypertarget{class_u_i_renderer_a063e1e52cf61320266f44049db712ed5}{static const int {\bfseries Overdraw} = 4}\label{class_u_i_renderer_a063e1e52cf61320266f44049db712ed5}
+
+\item 
+\hypertarget{class_u_i_renderer_a0b81268994fe6323c3489d148d9c2a69}{static const int {\bfseries Flip\-Y} = 8}\label{class_u_i_renderer_a0b81268994fe6323c3489d148d9c2a69}
+
+\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -156,6 +174,22 @@ Sets the antialiasing mode.
 Default value is M\-S\-A\-A. 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\tt in}  & {\em mode} & Noesis\-::\-Gui\-::\-Antialiasing\-Mode \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_u_i_renderer_af9dca433a7bba7349412539760e9a6d6}{\index{U\-I\-Renderer@{U\-I\-Renderer}!Set\-Flags@{Set\-Flags}}
+\index{Set\-Flags@{Set\-Flags}!UIRenderer@{U\-I\-Renderer}}
+\subsubsection[{Set\-Flags}]{\setlength{\rightskip}{0pt plus 5cm}void U\-I\-Renderer\-::\-Set\-Flags (
+\begin{DoxyParamCaption}
+\item[{const int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{class_u_i_renderer_af9dca433a7bba7349412539760e9a6d6}
+
+
+Sets renderer flags. 
+
+Noesis\-::\-Gui\-::\-Renderer\-Flags 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em flag} & Wireframe, Color\-Batch, Overdraw or Flip\-Y. Flags can be combined. \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_u_i_renderer_ad8eacb018b912e5d7786ca6f1642b4ce}{\index{U\-I\-Renderer@{U\-I\-Renderer}!Set\-Offscreen\-Size@{Set\-Offscreen\-Size}}

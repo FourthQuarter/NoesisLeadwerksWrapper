@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">NoesisLeadwerksWrapper
-   &#160;<span id="projectnumber">0.42</span>
+   &#160;<span id="projectnumber">0.44</span>
    </div>
    <div id="projectbrief">NLW</div>
   </td>
@@ -105,6 +105,7 @@ $(document).ready(function(){initNavTree('class_u_i_renderer.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_u_i_renderer-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -121,7 +122,7 @@ Collaboration diagram for UIRenderer:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_u_i_renderer__coll__graph.png" border="0" usemap="#_u_i_renderer_coll__map" alt="Collaboration graph"/></div>
 <map name="_u_i_renderer_coll__map" id="_u_i_renderer_coll__map">
-<area shape="rect" id="node2" href="class_open_g_l_state.html" title="Stores and restores the current GPU state. " alt="" coords="1242,627,1363,733"/><area shape="rect" id="node11" href="struct_render_states.html" title="{RenderStates\n|+ frameBuffer\l+ viewport\l+ clearStencil\l+ depthFunc\l+ stencilTestFailOp\l+ stencilTestSPDF\l+ stencilFunc\l+ stencilRef\l+ stencilWriteMask\l+ cullFaceMode\l+ dither\l+ blendEquation\l+ blendSource\l+ unpackAlignment\l|}" alt="" coords="1790,294,1924,562"/></map>
+<area shape="rect" id="node2" href="class_open_g_l_state.html" title="Stores and restores the current GPU state. " alt="" coords="1242,685,1363,792"/><area shape="rect" id="node11" href="struct_render_states.html" title="{RenderStates\n|+ frameBuffer\l+ viewport\l+ clearStencil\l+ depthFunc\l+ stencilTestFailOp\l+ stencilTestSPDF\l+ stencilFunc\l+ stencilRef\l+ stencilWriteMask\l+ cullFaceMode\l+ dither\l+ blendEquation\l+ blendSource\l+ unpackAlignment\l|}" alt="" coords="1790,294,1924,562"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -194,6 +195,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a0989015bf54f7b6c624829c1fbf284d7"><td class="memItemLeft" align="right" valign="top">Noesis::Gui::FrameworkElement *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_renderer.html#a0989015bf54f7b6c624829c1fbf284d7">GetXAML</a> ()</td></tr>
 <tr class="memdesc:a0989015bf54f7b6c624829c1fbf284d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the loaded XAML.  <a href="#a0989015bf54f7b6c624829c1fbf284d7">More...</a><br/></td></tr>
 <tr class="separator:a0989015bf54f7b6c624829c1fbf284d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9dca433a7bba7349412539760e9a6d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_renderer.html#af9dca433a7bba7349412539760e9a6d6">SetFlags</a> (const int flags)</td></tr>
+<tr class="memdesc:af9dca433a7bba7349412539760e9a6d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets renderer flags.  <a href="#af9dca433a7bba7349412539760e9a6d6">More...</a><br/></td></tr>
+<tr class="separator:af9dca433a7bba7349412539760e9a6d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a6472e56938d0e576e6e49f55f53355d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6472e56938d0e576e6e49f55f53355d1"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>Wireframe</b> = 1</td></tr>
+<tr class="separator:a6472e56938d0e576e6e49f55f53355d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1936b4d333e8b4dcbfc8ae7842d7831b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1936b4d333e8b4dcbfc8ae7842d7831b"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>ColorBatch</b> = 2</td></tr>
+<tr class="separator:a1936b4d333e8b4dcbfc8ae7842d7831b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a063e1e52cf61320266f44049db712ed5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a063e1e52cf61320266f44049db712ed5"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>Overdraw</b> = 4</td></tr>
+<tr class="separator:a063e1e52cf61320266f44049db712ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b81268994fe6323c3489d148d9c2a69"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b81268994fe6323c3489d148d9c2a69"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>FlipY</b> = 8</td></tr>
+<tr class="separator:a0b81268994fe6323c3489d148d9c2a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -319,6 +338,31 @@ Noesis::Gui::FrameworkElement *&#160;</td><td class="memItemRight" valign="botto
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>Noesis::Gui::AntialiasingMode </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af9dca433a7bba7349412539760e9a6d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UIRenderer::SetFlags </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>flags</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets renderer flags. </p>
+<p>Noesis::Gui::RendererFlags </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">flag</td><td>Wireframe, ColorBatch, Overdraw or FlipY. Flags can be combined. </td></tr>
   </table>
   </dd>
 </dl>
@@ -453,7 +497,7 @@ Noesis::Gui::FrameworkElement *&#160;</td><td class="memItemRight" valign="botto
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_u_i_renderer.html">UIRenderer</a></li>
-    <li class="footer">Generated on Thu Apr 24 2014 00:55:08 for NoesisLeadwerksWrapper by
+    <li class="footer">Generated on Fri Apr 25 2014 07:39:32 for NoesisLeadwerksWrapper by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -161,6 +161,19 @@ public:
 	 * \return XAML
 	 */
 	Noesis::Gui::FrameworkElement*	GetXAML();
+	
+	/**
+	 * \brief  Sets renderer flags
+	 * \details Noesis::Gui::RendererFlags
+	 * \param[in] flag Wireframe, ColorBatch, Overdraw or FlipY. Flags can be combined.
+	 */
+	void	SetFlags(const int flags);
+
+	// Render flags
+	static const int	Wireframe;
+	static const int	ColorBatch;
+	static const int	Overdraw;
+	static const int	FlipY;
 };
 
 #endif//UI_RENDERER_H
