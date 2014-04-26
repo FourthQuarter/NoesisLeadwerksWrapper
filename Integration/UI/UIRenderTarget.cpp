@@ -65,7 +65,7 @@ UIRenderTarget::UIRenderTarget(const int width, const int height, const int form
 {
 	// Create a texture
 	texture = (Leadwerks::OpenGL2Texture*)Leadwerks::Texture::Create(width, height, format, flags, frames, samples);
-
+	
 	// Create a FBO
 	V(glGenFramebuffers(1, &fbo));
 	V(glBindFramebuffer(GL_FRAMEBUFFER, fbo));
@@ -96,12 +96,14 @@ UIRenderTarget::~UIRenderTarget()
 
 void UIRenderTarget::Begin()
 {
+	glViewport(0, 0, texture->GetWidth(), texture->GetHeight());
 	VD(glBindFramebuffer(GL_FRAMEBUFFER, fbo));
 }
 
 void UIRenderTarget::End()
 {
 	VD(glBindFramebuffer(GL_FRAMEBUFFER, 0));
+	glViewport(0, 0, Leadwerks::Context::GetCurrent()->GetWidth(), Leadwerks::Context::GetCurrent()->GetHeight());
 }
 
 Leadwerks::Texture* UIRenderTarget::GetTexture()
