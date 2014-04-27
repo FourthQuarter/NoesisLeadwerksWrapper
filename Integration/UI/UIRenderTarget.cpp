@@ -96,14 +96,20 @@ UIRenderTarget::~UIRenderTarget()
 
 void UIRenderTarget::Begin()
 {
-	glViewport(0, 0, texture->GetWidth(), texture->GetHeight());
+	VD(glViewport(0, 0, texture->GetWidth(), texture->GetHeight()));
 	VD(glBindFramebuffer(GL_FRAMEBUFFER, fbo));
 }
 
 void UIRenderTarget::End()
 {
 	VD(glBindFramebuffer(GL_FRAMEBUFFER, 0));
-	glViewport(0, 0, Leadwerks::Context::GetCurrent()->GetWidth(), Leadwerks::Context::GetCurrent()->GetHeight());
+	VD(glViewport(0, 0, Leadwerks::Context::GetCurrent()->GetWidth(), Leadwerks::Context::GetCurrent()->GetHeight()));
+
+	// Rebuild mip maps
+	if (texture->hasmipmaps)
+	{
+		texture->BuildMipmaps();
+	}
 }
 
 Leadwerks::Texture* UIRenderTarget::GetTexture()
