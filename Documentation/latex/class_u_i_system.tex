@@ -12,7 +12,8 @@ Manages all U\-I related renderers.
 
 
 
-Collaboration diagram for U\-I\-System\-:\nopagebreak
+Collaboration diagram for U\-I\-System\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -41,7 +42,9 @@ void \hyperlink{class_u_i_system_a833da0ec7454752a7872d82051366aad}{Remove\-Mous
 \begin{DoxyCompactList}\small\item\em Capture mouse input. \end{DoxyCompactList}\item 
 \hypertarget{class_u_i_system_a29ac5727af1a979e24f4e8a92ff7a5a3}{void \hyperlink{class_u_i_system_a29ac5727af1a979e24f4e8a92ff7a5a3}{Capture} ()}\label{class_u_i_system_a29ac5727af1a979e24f4e8a92ff7a5a3}
 
-\begin{DoxyCompactList}\small\item\em Capture Keyboard and mouse input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Capture Keyboard and mouse input. \end{DoxyCompactList}\item 
+void \hyperlink{class_u_i_system_a1d776f5b5beb8c0577f9846cb5908c77}{Add\-Resource\-Dictionary} (std\-::string path)
+\begin{DoxyCompactList}\small\item\em Tells noesis where the preprocessed resources are located. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -140,6 +143,20 @@ The specified renderer must have an unique id assigned
 \mbox{\tt in}  & {\em ui\-Renderer} & Listener \\
 \hline
 \end{DoxyParams}
+\hypertarget{class_u_i_system_a1d776f5b5beb8c0577f9846cb5908c77}{\index{U\-I\-System@{U\-I\-System}!Add\-Resource\-Dictionary@{Add\-Resource\-Dictionary}}
+\index{Add\-Resource\-Dictionary@{Add\-Resource\-Dictionary}!UISystem@{U\-I\-System}}
+\subsubsection[{Add\-Resource\-Dictionary}]{\setlength{\rightskip}{0pt plus 5cm}void U\-I\-System\-::\-Add\-Resource\-Dictionary (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{path}
+\end{DoxyParamCaption}
+)}}\label{class_u_i_system_a1d776f5b5beb8c0577f9846cb5908c77}
+
+
+Tells noesis where the preprocessed resources are located. 
+
+\begin{DoxyWarning}{Warning}
+Must be called before loading the first X\-A\-M\-L 
+\end{DoxyWarning}
 \hypertarget{class_u_i_system_a609dfe50f7414f19e8fc6552807eb4e8}{\index{U\-I\-System@{U\-I\-System}!Convert\-Key@{Convert\-Key}}
 \index{Convert\-Key@{Convert\-Key}!UISystem@{U\-I\-System}}
 \subsubsection[{Convert\-Key}]{\setlength{\rightskip}{0pt plus 5cm}int U\-I\-System\-::\-Convert\-Key (

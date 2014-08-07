@@ -1,6 +1,7 @@
 /*********************************************************************************
 *	The MIT License(MIT)
 *
+*	Version 1.1
 *	Copyright © 2014, Bryan Andrew King
 *	All rights reserved.
 *
@@ -30,6 +31,8 @@
 #include <NsCore\NsSystem.h>
 #include <NsCore\NsConfig.h>
 #include <NsGui\InputEnums.h>
+#include <NsResource\ResourceProvider.h>
+#include <NsResource\IResourceSystem.h>
 
 // Leadwerks
 #include <Leadwerks.h>
@@ -415,4 +418,10 @@ void UISystem::Capture()
 void UISystem::EnableStencil()
 {
 	Leadwerks::OpenGLStencilBits = 8;
+}
+
+void UISystem::AddResourceDictionary(std::string path)
+{
+	Noesis::Core::Ptr<Noesis::Resource::ResourceProvider> provider = *new Noesis::Resource::LocalResourceProvider(path.c_str());
+	NsGetSystem<Noesis::Resource::IResourceSystem>()->AddProvider(provider.GetPtr());
 }

@@ -1,6 +1,7 @@
 /*********************************************************************************
 *	The MIT License(MIT)
 *
+*	Version 1.0
 *	Copyright © 2014, Bryan Andrew King
 *	All rights reserved.
 *

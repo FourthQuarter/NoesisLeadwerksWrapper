@@ -1,6 +1,7 @@
 /*********************************************************************************
 *	The MIT License(MIT)
 *
+*	Version 1.1
 *	Copyright © 2014, Bryan Andrew King
 *	All rights reserved.
 *
@@ -130,6 +131,12 @@ public:
 	 * \warning Must be called before context creation!
 	 */
 	static void				EnableStencil();
+
+	/**
+	 * \brief Tells noesis where the preprocessed resources are located
+	 * \warning Must be called before loading the first XAML
+	 */
+	void					AddResourceDictionary(std::string path);
 };
 
 #endif//UI_SYSTEM_H
